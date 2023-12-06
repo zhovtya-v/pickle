@@ -1,0 +1,127 @@
+{{ 'scrolling-text-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .scrolling-text-bar-section-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+
+        background: {{ section.settings.section_background }};
+    }
+
+    .scrolling-text-bar-section-{{ section.id }} .message {
+        font-size: {{ section.settings.mob_message_size }}px;
+        color: {{ section.settings.colorText }};
+    }
+
+    @media screen and (min-width: 750px) {
+        .scrolling-text-bar-section-{{ section.id }} {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+
+        .scrolling-text-bar-section-{{ section.id }} .message {
+            font-size: {{ section.settings.desk_message_size }}px;
+        }
+    }
+{%- endstyle -%}
+
+<div class="scrolling-text-bar scrolling-text-messages scrolling-text-bar-section-{{ section.id }}" data-speed="{{ section.settings.speed }}">
+    <div class="message-wrap">
+        {%- for block in section.blocks -%}
+            <span class="message">{{ block.settings.message }}</span>
+        {%- endfor -%}
+    </div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Scrolling text",
+    "tag": "section",
+    "class": "section scrolling-text-section",
+    "settings":
+        [
+            {
+                  "type": "text",
+                  "id": "speed",
+                  "label": "Speed",
+                  "default": "15"
+            },
+            {
+                "type": "color",
+                "id": "colorText",
+                "label": "Text color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "desk_message_size",
+                "min": 0,
+                "max": 48,
+                "step": 1,
+                "unit": "px",
+                "label": "Message size on desktop",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "mob_message_size",
+                "min": 0,
+                "max": 48,
+                "step": 1,
+                "unit": "px",
+                "label": "Message size on mobile",
+                "default": 16
+            },
+            {
+                "type": "color",
+                "id": "section_background",
+                "label": "Section background",
+                "default": "#ffffff"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.all.padding.section_padding_heading"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 20
+            }
+        ],
+
+        "blocks": [
+            {
+                "type": "header",
+                "name": "Message",
+                "settings": [
+                  {
+                    "id": "message",
+                    "type": "textarea",
+                   "label": "Message"
+                  }]
+                }
+            ],
+  "presets": [
+    {
+      "name": "Scrolling text"
+    }
+  ]
+}
+
+{% endschema %}

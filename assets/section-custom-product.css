@@ -1,0 +1,70 @@
+.custom-product-section {
+    background: #1F4794;
+}
+
+.custom-product-section .custom-product-title {
+    color: #F4BE18;
+    font-size: 6rem;
+    margin: 0 auto;
+    max-width: 63rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 4px 4px #1C1C1C;
+}
+
+.custom-product-section .custom-product-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.custom-product-section .custom-product-item {
+    max-width: 40rem;
+    margin: 0 2rem;
+    border-radius: 4rem;
+    background: #FFFCFA;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 13px 13px 0 0 #D55F4A;
+}
+
+.custom-product-section .custom-product-item .button {
+    z-index: 0;
+    width: 100%;
+}
+
+.custom-product-section .custom-product-item .item-title {
+    font-size: 3.2rem;
+    color: #1C1C1C;
+    text-align: center;
+    font-family: 'NewSpiritBold', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0 15px;
+}
+
+.custom-product-section .custom-product-item .item-text {
+    font-size: 1.6rem;
+    color: #1C1C1C;
+    flex-grow: 1;
+}
+
+.custom-product-section .custom-product-item .item-wrap {
+    border: 1px solid #F4D5CD;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.custom-product-section .custom-product-item .item-header {
+    border-radius: 18px 18px 0 0;
+    background: #D55F4A;
+}
+
+.custom-product-section .custom-product-item .item-price {
+    color: #1F4692;
+    font-size: 2.4rem;
+    font-family: 'NewSpiritBold', sans-serif;
+    font-weight: 700;
+}

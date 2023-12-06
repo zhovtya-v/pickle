@@ -1,0 +1,51 @@
+.scrolling-text-bar.scrolling-text-messages {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.scrolling-text-bar .message-wrap {
+    display: flex;
+}
+
+.scrolling-text-bar .message {
+    padding: 0 50px;
+    position: relative;
+    flex-shrink: 0;
+
+    white-space: nowrap;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+
+    font-family: 'NewSpiritBold', sans-serif;
+    font-weight: 700;
+}
+
+.scrolling-text-bar .message:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc( 100% - 2.2rem );
+    width: 4.4rem;
+    height: 4.4rem;
+    transform: translateY(-50%);
+    background: url("star.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.scrolling-text-bar .message:first-child:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: calc( 100% - 2.2rem );
+    width: 4.4rem;
+    height: 4.4rem;
+    transform: translateY(-50%);
+    background: url("./star.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+

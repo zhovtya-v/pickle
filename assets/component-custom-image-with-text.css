@@ -1,0 +1,9 @@
+.custom-image-with-text {
+    background: #FFF6EE;
+}
+
+.custom-image-with-text .block-border {
+    border: 0.3rem solid;
+    border-right-width: 1.5rem;
+    border-bottom-width: 1.5rem;
+}

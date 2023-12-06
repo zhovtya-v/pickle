@@ -1,0 +1,30 @@
+.custom-section-multicolumn {
+    background-color: #FFF6EE;
+    background-image: url("./custom-multicolumn-section-bg.jpg");
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+}
+
+.custom-section-multicolumn.multicolumn .title-wrapper-with-link {
+    justify-content: center;
+}
+
+.custom-section-multicolumn.multicolumn .multicolumn-card {
+    display: flex;
+    align-items: center;
+    background: #FFFCFA;
+    border-radius: 10rem;
+    border: 0.1rem solid #1F4692;
+    border-right-width: 0.7rem;
+    border-bottom-width: 0.7rem;
+}
+
+.custom-section-multicolumn .multicolumn-card__image-wrapper {
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex-shrink: 0;
+    width: 6rem;
+}

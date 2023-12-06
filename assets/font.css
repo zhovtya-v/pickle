@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Birdie";
+    src: url("{{ 'Birdie-BF64f700fb417a3.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritBold";
+    src: url("{{ 'New Spirit Bold.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritLight";
+    src: url("{{ 'New Spirit Light.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritMedium";
+    src: url("{{ 'New Spirit Medium.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritRegular";
+    src: url("{{ 'New Spirit Regular.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritSemiBold";
+    src: url("{{ 'New Spirit SemiBold.woff2' | file_url }}") format("woff2");
+}
+@font-face {
+    font-family: "NewSpiritMediumCondensed";
+    src: url("{{ 'NewSpirit-MediumCondensed.woff2' | file_url }}") format("woff2");
+}
