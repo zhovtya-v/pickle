@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Birdie";
+  src: url("Birdie.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritBold";
+  src: url("NewSpiritBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritLight";
+  src: url("NewSpiritLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritMedium";
+  src: url("NewSpiritMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritRegular";
+  src: url("NewSpiritRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritSemiBold";
+  src: url("NewSpiritSemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NewSpiritMediumCondensed";
+  src: url("NewSpirit-MediumCondensed.woff2") format("woff2");
+}
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -155,6 +184,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   .page-width-desktop {
     max-width: var(--page-width);
     padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .page-width {
+    padding: 0 0;
   }
 }
 
@@ -1184,8 +1219,6 @@ deferred-media {
 
 /* component-button */
 /* Button - default */
-
-
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
@@ -2408,8 +2441,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
   background-color: rgb(var(--color-background));
 
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 5rem;
+  right: 5rem;
   top: 40px;
 }
 
@@ -2444,6 +2477,12 @@ product-info .loading__spinner:not(.hidden) ~ *,
   .header {
     grid-template-columns: 1fr auto 1fr;
 
+  }
+
+  .header-wrapper {
+    left: 0;
+    right: 0;
+    top: 40px;
   }
 
   .header--top-left,

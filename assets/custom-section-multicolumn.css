@@ -19,6 +19,7 @@
     border: 0.1rem solid #1F4692;
     border-right-width: 0.7rem;
     border-bottom-width: 0.7rem;
+    padding: 0 2.4rem;
 }
 
 .custom-section-multicolumn .multicolumn-card__image-wrapper {
@@ -27,4 +28,32 @@
     margin-right: 0;
     flex-shrink: 0;
     width: 6rem;
+}
+
+.custom-section-multicolumn.multicolumn .title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 4.4rem;
+    text-shadow: 4px 4px #1f4692;
+}
+
+.custom-section-multicolumn.multicolumn .multicolumn-card__image-wrapper+.multicolumn-card__info {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+.custom-section-multicolumn.multicolumn .multicolumn-card__info h3 {
+    font-size: 2rem;
+}
+
+
+.custom-section-multicolumn.multicolumn .multicolumn-list {
+    row-gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .custom-section-multicolumn.multicolumn .multicolumn-card__info h3 {
+        font-size: 3.2rem;
+    }
 }
