@@ -28,6 +28,8 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+
+
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -49,6 +51,13 @@
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
+
+        <h1 class="header__heading"><a href="/" class="header__heading-link link link--text focus-inset"><div class="header__heading-logo-wrapper">
+
+                <img src="//5eae40-2.myshopify.com/cdn/shop/files/logo.svg?v=1701441644&amp;width=600" alt="My Store" srcset="//5eae40-2.myshopify.com/cdn/shop/files/logo.svg?v=1701441644&amp;width=170 170w, //5eae40-2.myshopify.com/cdn/shop/files/logo.svg?v=1701441644&amp;width=255 255w, //5eae40-2.myshopify.com/cdn/shop/files/logo.svg?v=1701441644&amp;width=340 340w" width="170" height="55.028901734104046" loading="eager" class="header__heading-logo motion-reduce" sizes="(max-width: 340px) 50vw, 170px">
+              </div></a></h1>
+
+
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -353,7 +362,7 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        {% comment %}<small class="copyright__content">{{ powered_by_link }}</small>{% endcomment %}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -367,6 +376,7 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        <a href="#">all rights reserved</a>
       </div>
     </div>
   </div>

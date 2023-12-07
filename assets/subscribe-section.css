@@ -1,0 +1,119 @@
+.subscribe-section {
+    background-image: url("./subscribe-top-bg.png");
+    background-repeat: no-repeat;
+    background-size: 116rem auto;
+    position: relative;
+}
+
+.subscribe-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./subscribe-star-bg.png");
+    background-repeat: no-repeat;
+    background-size: 130rem auto;
+    z-index: -1;
+}
+
+.subscribe-wrap .swiper-wrapper {
+    min-height: 428px;
+    min-height: 470px;
+    align-items: center;
+}
+
+.subscribe-wrap .subscribe-column.swiper-slide:nth-child(odd) {
+    transform: translateY(20px) scale(1.14) rotate(5deg);
+}
+
+.subscribe-wrap .subscribe-column.swiper-slide:nth-child(even) {
+    transform: scale(1.14) rotate(-8deg);
+}
+
+.subscribe-section .title {
+    text-shadow: 1px 3px #1C1C1C;
+}
+
+.subscribe-column {
+    border: 3px solid #D55F4A;
+    border-radius: 32px;
+    background: #FFFCFA;
+    padding: 40px 12px 12px;
+}
+
+.subscribe-column .card-layer {
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    right: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.subscribe-column .card-layer span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.subscribe-column .card-layer span:first-child {
+    background: #D55F4A;
+    margin-right: 6px;
+}
+
+.subscribe-column .card-layer span:nth-child(2) {
+    background: #F4BE18;
+    margin-right: 6px;
+}
+
+.subscribe-column .card-layer span:last-child {
+    background: #1F4692;
+}
+
+.subscribe-column .image-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.subscribe-column .image-wrap img {
+    vertical-align: bottom;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-section {
+        background-size: 100% auto;
+    }
+
+    .subscribe-section:before {
+        background-size: 100% auto;
+    }
+
+    .subscribe-wrap .subscribe-column.swiper-slide:nth-child(odd) {
+        transform: translateY(20px) scale(1.14) rotate(8deg);
+    }
+
+    .subscribe-wrap .subscribe-column.swiper-slide:nth-child(even) {
+        transform: scale(1.14) rotate(-4deg);
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .subscribe-wrap .swiper-wrapper {
+        min-height: 600px;
+    }
+}

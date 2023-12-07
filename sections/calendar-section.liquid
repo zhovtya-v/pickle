@@ -7,7 +7,7 @@
     }
 
     .calendar-section {
-        background-color: {{ section.settings.color_bg }};
+        background-color: {{ section.settings.color_bg }}!important;
     }
 
     @media screen and (min-width: 750px) {
@@ -22,30 +22,31 @@
     <div class="page-width section-{{ section.id }}-padding">
         <h2 class="title">{{ section.settings.title }}</h2>
         <div class="calendar-wrap swiper">
+            <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                    <div class="calendar-column swiper-slide {% if block.settings.has_label %} sale-label{% endif %}">
+                        <div class="day-title">{{ block.settings.day_title }}</div>
 
-            {%- for block in section.blocks -%}
-                <div class="calendar-column {% if block.settings.has_label %} sale-label{% endif %}">
-                    <div class="day-title">{{ block.settings.day_title }}</div>
+                        <div class="day-info-wrap">
+                            <div class="day-date">{{ block.settings.date }}</div>
 
-                    <div class="day-info-wrap">
-                        <div class="day-date">{{ block.settings.date }}</div>
+                            <div class="info-wrap">
+                                <div class="info">{{ block.settings.break_info }}</div>
+                                <div class="time-info">{{ block.settings.time_info }}</div>
 
-                        <div class="info-wrap">
-                            <div class="info">{{ block.settings.break_info }}</div>
-                            <div class="time-info">{{ block.settings.time_info }}</div>
+                                <div class="info">{{ block.settings.break_info_2 }}</div>
+                                <div class="time-info">{{ block.settings.time_info_2 }}</div>
 
-                            <div class="info">{{ block.settings.break_info_2 }}</div>
-                            <div class="time-info">{{ block.settings.time_info_2 }}</div>
+                                <div class="info">{{ block.settings.break_info_3 }}</div>
+                                <div class="time-info">{{ block.settings.time_info_3 }}</div>
+                            </div>
 
-                            <div class="info">{{ block.settings.break_info_3 }}</div>
-                            <div class="time-info">{{ block.settings.time_info_3 }}</div>
+                            <a href="{{ block.settings.link }}" class="button button--primary">{{ block.settings.button_name }}</a>
                         </div>
 
-                        <a href="{{ block.settings.link }}" class="button button--primary">{{ block.settings.button_name }}</a>
                     </div>
-
-                </div>
-            {%- endfor -%}
+                {%- endfor -%}
+            </div>
         </div>
     </div>
 </div>

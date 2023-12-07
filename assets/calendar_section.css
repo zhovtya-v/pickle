@@ -7,8 +7,8 @@
 
 .calendar-section .title {
     text-align: center;
-    font-size: 60px;
-    text-shadow: 4px 4px #FFFCFA;
+    font-size: 3.2rem;
+    text-shadow: 1px 3px #FFFCFA;
 }
 
 .calendar-section .calendar-wrap {
@@ -20,16 +20,6 @@
     box-shadow: 12px 12px 0 0 #1F4692;
     border-radius: 40px;
     padding: 36px 24px;
-}
-
-.calendar-section .calendar-column {
-    width: 14.28%;
-    padding: 0 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .calendar-section .calendar-column.sale-label {
@@ -51,7 +41,6 @@
 .calendar-section .day-info-wrap {
     border: 1px solid #DDDFE6;
     border-radius: 20px;
-    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -63,6 +52,7 @@
 
 .calendar-section .day-title {
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .calendar-section .day-date {
@@ -98,4 +88,39 @@
 
 .calendar-section .button.button--primary:before {
     display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .calendar-section .calendar-wrap {
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .calendar-section .title {
+        font-size: 6rem;
+        text-shadow: 4px 4px #FFFCFA;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .calendar-section .calendar-column {
+        width: 14.28%;
+        padding: 0 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .calendar-section .day-info-wrap {
+        width: 100%;
+    }
+
+    .calendar-section .swiper-wrapper {
+        height: auto;
+        box-sizing: border-box;
+    }
 }
