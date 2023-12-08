@@ -48,6 +48,8 @@
     justify-content: flex-start;
     height: 100%;
     padding: 3px 17px 9px 17px;
+
+    min-height: 300px;
 }
 
 .calendar-section .day-title {
@@ -117,8 +119,9 @@
 
     .calendar-section .day-info-wrap {
         width: 100%;
+        min-height: auto;
     }
-
+    
     .calendar-section .swiper-wrapper {
         height: auto;
         box-sizing: border-box;

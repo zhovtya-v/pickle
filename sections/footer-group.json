@@ -2,15 +2,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "c135dadf-5996-48b3-97d4-b2a59d2ff456": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"page-width\"><h1 class=\"header__heading\"><a href=\"\/\" class=\"header__heading-link link link--text focus-inset\"><div class=\"header__heading-logo-wrapper\">\n                \n                <img src=\"\/\/5eae40-2.myshopify.com\/cdn\/shop\/files\/logo.svg?v=1701441644&amp;width=600\" alt=\"My Store\" srcset=\"\/\/5eae40-2.myshopify.com\/cdn\/shop\/files\/logo.svg?v=1701441644&amp;width=170 170w, \/\/5eae40-2.myshopify.com\/cdn\/shop\/files\/logo.svg?v=1701441644&amp;width=255 255w, \/\/5eae40-2.myshopify.com\/cdn\/shop\/files\/logo.svg?v=1701441644&amp;width=340 340w\" width=\"170\" height=\"55.028901734104046\" loading=\"eager\" class=\"header__heading-logo motion-reduce\" sizes=\"(max-width: 340px) 50vw, 170px\">\n              <\/div><\/a><\/h1><\/div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -41,21 +32,13 @@
             "heading": "",
             "subtext": "<p>Thursday 7am – 11pm<br\/>Friday 7am – 12am<br\/>Saturday 7am – 12am<br\/>Sunday 7am – 9pm<\/p>"
           }
-        },
-        "3c5f135b-4862-4f5a-87dd-26755dc5017e": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": ""
-          }
         }
       },
       "block_order": [
         "01aa5f39-3e54-40f6-ba6c-3e5acebfe790",
         "26fcd792-ef83-4e43-990c-6b8260d5cb60",
         "14f85614-ab8a-482c-ba65-29041b39ee8f",
-        "3e5bfbda-50f8-4e16-9ae3-126a4b7261b2",
-        "3c5f135b-4862-4f5a-87dd-26755dc5017e"
+        "3e5bfbda-50f8-4e16-9ae3-126a4b7261b2"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -74,7 +57,6 @@
     }
   },
   "order": [
-    "c135dadf-5996-48b3-97d4-b2a59d2ff456",
     "footer"
   ]
 }
