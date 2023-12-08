@@ -1,37 +1,107 @@
 {{ 'scrolling-text-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .scrolling-text-bar-section-{{ section.id }} {
+    .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
 
-        background: {{ section.settings.section_background }};
+        background: {{ section.settings.tapes_background }};
     }
 
-    .scrolling-text-bar-section-{{ section.id }} .message {
+    .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar-2 {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+
+        background: {{ section.settings.tapes_background_2 }};
+    }
+
+    .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
         font-size: {{ section.settings.mob_message_size }}px;
         color: {{ section.settings.colorText }};
     }
 
+    .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar-2 .message {
+        color: {{ section.settings.colorText_2 }};
+    }
+
+    .scrolling-text-bar-wrap-has-two-tapes {
+        background: {{ section.settings.section_background }};
+        margin-top: -2px;
+        overflow: hidden;
+    }
+
     @media screen and (min-width: 750px) {
-        .scrolling-text-bar-section-{{ section.id }} {
+        .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar, .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar-2 {
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
 
-        .scrolling-text-bar-section-{{ section.id }} .message {
+        .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
             font-size: {{ section.settings.desk_message_size }}px;
         }
     }
 {%- endstyle -%}
 
-<div class="scrolling-text-bar scrolling-text-messages scrolling-text-bar-section-{{ section.id }}" data-speed="{{ section.settings.speed }}">
-    <div class="message-wrap">
-        {%- for block in section.blocks -%}
-            <span class="message">{{ block.settings.message }}</span>
-        {%- endfor -%}
+<div class="scrolling-text-bar-section-{{ section.id }}">
+    <div class="scrolling-text-bar-wrap scrolling-text-bar-wrap-{%- if section.settings.two_tapes != blank -%} has-two-tapes{%- endif -%}">
+        {%- if section.settings.two_tapes != blank -%}
+            <div class="scrolling-text-bar scrolling-text-messages scrolling-text-bar-1" data-speed="{{ section.settings.speed }}">
+                <div class="message-wrap">
+                    {%- for block in section.blocks -%}
+                        {% case block.type %}
+                            {% when 'text' %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message">{{ block.settings.message_1 }}</span>{% endif %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message">{{ block.settings.message_2 }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message">{{ block.settings.message_3 }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message">{{ block.settings.message_4 }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                        {% endcase %}
+                    {%- endfor -%}
+                </div>
+            </div>
+            <div class="scrolling-text-bar scrolling-text-messages scrolling-text-bar-2" data-speed="{{ section.settings.speed }}">
+                <div class="message-wrap">
+                    {%- for block in section.blocks -%}
+                        {% case block.type %}
+                            {% when 'text' %}
+                                {%- if block.settings.message_5 != blank -%}<span class="message">{{ block.settings.message_5 }}</span>{% endif %}
+                                {%- if block.settings.message_5 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_6 != blank -%}<span class="message">{{ block.settings.message_6 }}</span>{% endif %}
+                                {%- if block.settings.message_6 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_7 != blank -%}<span class="message">{{ block.settings.message_7 }}</span>{% endif %}
+                                {%- if block.settings.message_7 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_8 != blank -%}<span class="message">{{ block.settings.message_8 }}</span>{% endif %}
+                                {%- if block.settings.message_8 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                        {% endcase %}
+                    {%- endfor -%}
+                </div>
+            </div>
+        {%- else -%}
+            <div class="scrolling-text-bar scrolling-text-messages" data-speed="{{ section.settings.speed }}">
+                <div class="message-wrap">
+                    {%- for block in section.blocks -%}
+                        {% case block.type %}
+                            {% when 'text' %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message">{{ block.settings.message_1 }}</span>{% endif %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message">{{ block.settings.message_2 }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message">{{ block.settings.message_3 }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message">{{ block.settings.message_4 }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                        {% endcase %}
+                    {%- endfor -%}
+                </div>
+            </div>
+        {%- endif -%}
     </div>
 </div>
+
+
 
 {% schema %}
 
@@ -42,15 +112,37 @@
     "settings":
         [
             {
-                  "type": "text",
-                  "id": "speed",
-                  "label": "Speed",
-                  "default": "15"
+                "type": "color",
+                "id": "section_background",
+                "label": "Section background",
+                "default": "#ffffff"
+            },
+            {
+                "type": "header",
+                "content": "Two tapes"
+            },
+            {
+                "type": "checkbox",
+                "id": "two_tapes",
+                "default": false,
+                "label": "Two tapes"
+            },
+            {
+                "type": "text",
+                "id": "speed",
+                "label": "Speed",
+                "default": "15"
             },
             {
                 "type": "color",
                 "id": "colorText",
-                "label": "Text color",
+                "label": "The text color of the first tapes",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "colorText_2",
+                "label": "The text color of the second tapes",
                 "default": "#ffffff"
             },
             {
@@ -75,8 +167,14 @@
             },
             {
                 "type": "color",
-                "id": "section_background",
-                "label": "Section background",
+                "id": "tapes_background",
+                "label": "The text background of the first tapes",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "tapes_background_2",
+                "label": "The text background of the second tapes",
                 "default": "#ffffff"
             },
             {
@@ -104,24 +202,77 @@
                 "default": 20
             }
         ],
-
-        "blocks": [
-            {
-                "type": "header",
-                "name": "Message",
-                "settings": [
-                  {
-                    "id": "message",
-                    "type": "textarea",
-                   "label": "Message"
-                  }]
+        "blocks":
+            [
+                {
+                    "type": "text",
+                    "name": "Message",
+                    "limit": 1,
+                    "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "separator",
+                            "label": "Image separator"
+                        },
+                        {
+                            "id": "message_1",
+                            "type": "textarea",
+                            "label": "Message 1"
+                        },
+                        {
+                            "id": "message_2",
+                            "type": "textarea",
+                            "label": "Message 2"
+                        },
+                        {
+                            "id": "message_3",
+                            "type": "textarea",
+                            "label": "Message 3"
+                        },
+                        {
+                            "id": "message_4",
+                            "type": "textarea",
+                            "label": "Message 4"
+                        },
+                        {
+                            "type": "image_picker",
+                            "id": "separator_2",
+                            "label": "Image separator"
+                        },
+                        {
+                            "id": "message_5",
+                            "type": "textarea",
+                            "label": "Message 1"
+                        },
+                        {
+                            "id": "message_6",
+                            "type": "textarea",
+                            "label": "Message 2"
+                        },
+                        {
+                            "id": "message_7",
+                            "type": "textarea",
+                            "label": "Message 3"
+                        },
+                        {
+                            "id": "message_8",
+                            "type": "textarea",
+                            "label": "Message 4"
+                        }
+                    ]
                 }
             ],
-  "presets": [
-    {
-      "name": "Scrolling text"
-    }
-  ]
+
+    "presets": [
+        {
+            "name": "Scrolling text",
+            "blocks": [
+                {
+                    "type": "text"
+                }
+            ]
+        }
+    ]
 }
 
 {% endschema %}

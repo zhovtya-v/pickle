@@ -34,28 +34,30 @@
 
 .subscribe-section .title {
     text-shadow: 1px 3px #1C1C1C;
+    margin: 7.3rem 0 0;
+    font-size: 2.4rem;
 }
 
 .subscribe-column {
     border: 3px solid #D55F4A;
-    border-radius: 32px;
+    border-radius: 3.2rem;
     background: #FFFCFA;
-    padding: 40px 12px 12px;
+    padding: 4rem 1.2rem 1.2rem;
 }
 
 .subscribe-column .card-layer {
     position: absolute;
-    top: 21px;
-    left: 21px;
-    right: 21px;
+    top: 2.1rem;
+    left: 2.1rem;
+    right: 2.1rem;
     display: flex;
     align-items: center;
     justify-content: left;
 }
 
 .subscribe-column .card-layer span {
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
 }
 
@@ -110,10 +112,16 @@
     .subscribe-wrap .subscribe-column.swiper-slide:nth-child(even) {
         transform: scale(1.14) rotate(-4deg);
     }
+
+    .subscribe-section .title {
+        font-size: 3.2rem;
+    }
+
 }
 
 @media screen and (min-width: 1441px) {
     .subscribe-wrap .swiper-wrapper {
-        min-height: 600px;
+        min-height: 60rem;
+        margin-top: -3.3rem;
     }
 }

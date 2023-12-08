@@ -9,6 +9,8 @@
     text-align: center;
     font-size: 3.2rem;
     text-shadow: 1px 3px #FFFCFA;
+    max-width: 70rem;
+    margin: 0 auto 3rem;
 }
 
 .calendar-section .calendar-wrap {
@@ -49,7 +51,7 @@
     height: 100%;
     padding: 3px 17px 9px 17px;
 
-    min-height: 300px;
+    min-height: 330px;
 }
 
 .calendar-section .day-title {
@@ -102,6 +104,7 @@
     .calendar-section .title {
         font-size: 6rem;
         text-shadow: 4px 4px #FFFCFA;
+        margin: 0 auto 5rem;
     }
 }
 

@@ -9,7 +9,7 @@
 }
 
 .scrolling-text-bar .message {
-    padding: 0 4rem;
+    padding: 0 2rem;
     position: relative;
     flex-shrink: 0;
 
@@ -23,30 +23,35 @@
     font-weight: 700;
 }
 
-.scrolling-text-bar .message:not(:last-child):after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: calc( 100% - 1.2rem );
-    width: 2.4rem;
-    height: 2.4rem;
-    transform: translateY(-50%);
-    background: url("star.svg") no-repeat;
-    background-size: cover;
-    background-position: center;
+.scrolling-text-bar .message-separator {
+    display: flex;
+    align-items: center;
 }
 
-.scrolling-text-bar .message:first-child:before {
-    content: '';
+.scrolling-text-bar .message-separator img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.scrolling-text-bar-wrap-has-two-tapes {
+    position: relative;
+    height: 24rem;
+}
+
+.scrolling-text-bar-wrap-has-two-tapes .scrolling-text-bar {
     position: absolute;
     top: 50%;
-    right: calc( 100% - 2.2rem );
-    width: 4.4rem;
-    height: 4.4rem;
-    transform: translateY(-50%);
-    background: url("./star.svg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    left: -2rem;
+    right: -2rem;
+}
+
+.scrolling-text-bar-wrap-has-two-tapes .scrolling-text-bar-1 {
+    transform: translateY(-50%) rotate(5deg);
+    z-index: 1;
+}
+
+.scrolling-text-bar-wrap-has-two-tapes .scrolling-text-bar-2 {
+    transform: translateY(-50%) rotate(-6deg);
 }
 
 @media screen and (min-width: 750px) {
@@ -57,5 +62,14 @@
     .scrolling-text-bar .message:not(:last-child):after {
         width: 4.4rem;
         height: 4.4rem;
+    }
+
+    .scrolling-text-bar .message-separator img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .scrolling-text-bar .message {
+        padding: 0 4rem;
     }
 }

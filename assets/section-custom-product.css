@@ -6,7 +6,7 @@
     color: #F4BE18;
     font-size: 3.2rem;
     margin: 0 auto;
-    max-width: 63rem;
+    max-width: 73rem;
     text-align: center;
     font-weight: 700;
     text-shadow: 4px 4px #1C1C1C;
@@ -48,6 +48,7 @@
     line-height: 1.5;
     margin-bottom: 2rem;
     text-align: center;
+    letter-spacing: 0;
 }
 
 .custom-product-section .custom-product-item .item-wrap {

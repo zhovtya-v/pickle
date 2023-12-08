@@ -328,6 +328,7 @@
   box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
     var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
   word-break: break-word;
+  word-break: normal;
 }
 
 @media screen and (min-width: 990px) {

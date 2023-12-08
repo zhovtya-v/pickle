@@ -276,7 +276,7 @@
 
 @media screen and (min-width: 750px) {
   .banner__content {
-    padding: 23rem 0;
+    padding: 23rem 0 23rem 5rem;
   }
 
   .banner__content--top-left {
@@ -349,6 +349,7 @@
   text-align: center;
   width: 100%;
   word-wrap: break-word;
+  word-wrap: normal;
   z-index: 1;
 }
 
@@ -452,6 +453,7 @@
   line-height: 1;
   text-align: left;
   text-shadow: 2px 3px #ffffff;
+  word-break: normal;
 }
 
 .banner__box .banner__heading + * {

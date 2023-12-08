@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero_section_1.jpg",
+        "image": "shopify:\/\/shop_images\/hero_section_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-left",
@@ -97,6 +97,7 @@
         "8299f07e-e9a3-4304-95ed-6b4ddbadb7ef"
       ],
       "settings": {
+        "two_tapes": false,
         "speed": "4",
         "colorText": "#ffffff",
         "desk_message_size": 32,
@@ -112,7 +113,7 @@
         "template--14678803906642__e7cbfd7f-9ad0-40bb-bb4a-7031af509dab-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Approachable Tex-mex with Margaritas, Cold beer & much more!",
+            "heading": "<p>Approachable <br\/>Tex-mex with Margaritas, Cold beer & much more!<\/p>",
             "heading_color": "#fff6ee",
             "heading_size": "h1"
           }
@@ -291,6 +292,7 @@
         "fb267499-25b0-4ea3-87fb-01d01360e2cb"
       ],
       "settings": {
+        "two_tapes": true,
         "speed": "3",
         "colorText": "#1f4692",
         "desk_message_size": 32,

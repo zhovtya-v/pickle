@@ -317,6 +317,9 @@ h5,
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
+
+  word-break: normal;
+  letter-spacing: 0;
 }
 
 .hxl {
@@ -2473,7 +2476,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 
   .header.header--middle-right {
-    padding: 4px 0rem 4px 1rem;
+    padding: 4px 1rem;
   }
 
   .banner__buttons {
@@ -2481,7 +2484,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 
   .button.button--primary {
-    min-width: 100%;
+    min-width: 98%;
   }
 }
 
@@ -2613,7 +2616,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 
   .header--mobile-left {
-    grid-template-columns: 6fr 1fr 1fr;
+    grid-template-columns: 14fr 1fr 1fr;
   }
 
   .header__heading-logo {
