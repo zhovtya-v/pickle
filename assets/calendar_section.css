@@ -1,0 +1,129 @@
+.calendar-section {
+    background-image: url("./calendar-bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.calendar-section .title {
+    text-align: center;
+    font-size: 3.2rem;
+    text-shadow: 1px 3px #FFFCFA;
+}
+
+.calendar-section .calendar-wrap {
+    display: flex;
+    margin: 0 12px 0 0;
+    overflow: visible;
+    background: #FFFCFA;
+    border: 3px solid #1F4692;
+    box-shadow: 12px 12px 0 0 #1F4692;
+    border-radius: 40px;
+    padding: 36px 24px;
+}
+
+.calendar-section .calendar-column.sale-label {
+    position: relative;
+}
+
+.calendar-section .calendar-column.sale-label:after {
+    content: '';
+    position: absolute;
+    top: -1.2rem;
+    right: -2.5rem;
+    width: 10.4rem;
+    height: 10.4rem;
+    background: url("./sale-label.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.calendar-section .day-info-wrap {
+    border: 1px solid #DDDFE6;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 3px 17px 9px 17px;
+
+    min-height: 300px;
+}
+
+.calendar-section .day-title {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.calendar-section .day-date {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'NewSpiritBold', sans-serif;
+    margin-bottom: 4px;
+}
+
+.calendar-section .info-wrap {
+    flex-grow: 1;
+}
+
+.calendar-section .info {
+    margin-bottom: 3px;
+}
+
+.calendar-section .time-info {
+    color: #1F4692;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.calendar-section .button.button--primary {
+    background: transparent;
+    border: 1px solid #1F4692;
+    min-height: auto;
+    min-width: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.calendar-section .button.button--primary:before {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .calendar-section .calendar-wrap {
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .calendar-section .title {
+        font-size: 6rem;
+        text-shadow: 4px 4px #FFFCFA;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .calendar-section .calendar-column {
+        width: 14.28%;
+        padding: 0 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .calendar-section .day-info-wrap {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .calendar-section .swiper-wrapper {
+        height: auto;
+        box-sizing: border-box;
+    }
+}

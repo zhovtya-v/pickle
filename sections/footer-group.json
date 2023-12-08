@@ -1,1 +1,62 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"background-1","newsletter_enable":false,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":false,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "01aa5f39-3e54-40f6-ba6c-3e5acebfe790": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>201 Camp Road Charlotte NC 28206<br\/>Phone number - 443-744-2929<br\/>tanner@tipsypickle.com<\/p>"
+          }
+        },
+        "26fcd792-ef83-4e43-990c-6b8260d5cb60": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "14f85614-ab8a-482c-ba65-29041b39ee8f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>Monday 7am – 10pm<br\/>Tuesday 7am – 10pm<br\/>Wednesday 7am – 10pm<\/p>"
+          }
+        },
+        "3e5bfbda-50f8-4e16-9ae3-126a4b7261b2": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>Thursday 7am – 11pm<br\/>Friday 7am – 12am<br\/>Saturday 7am – 12am<br\/>Sunday 7am – 9pm<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "01aa5f39-3e54-40f6-ba6c-3e5acebfe790",
+        "26fcd792-ef83-4e43-990c-6b8260d5cb60",
+        "14f85614-ab8a-482c-ba65-29041b39ee8f",
+        "3e5bfbda-50f8-4e16-9ae3-126a4b7261b2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

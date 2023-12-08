@@ -9,7 +9,7 @@
 }
 
 .scrolling-text-bar .message {
-    padding: 0 50px;
+    padding: 0 4rem;
     position: relative;
     flex-shrink: 0;
 
@@ -27,9 +27,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: calc( 100% - 2.2rem );
-    width: 4.4rem;
-    height: 4.4rem;
+    left: calc( 100% - 1.2rem );
+    width: 2.4rem;
+    height: 2.4rem;
     transform: translateY(-50%);
     background: url("star.svg") no-repeat;
     background-size: cover;
@@ -49,3 +49,13 @@
     background-position: center;
 }
 
+@media screen and (min-width: 750px) {
+    .scrolling-text-bar .message {
+        padding: 0 5rem;
+    }
+
+    .scrolling-text-bar .message:not(:last-child):after {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+}

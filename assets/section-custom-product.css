@@ -4,27 +4,22 @@
 
 .custom-product-section .custom-product-title {
     color: #F4BE18;
-    font-size: 6rem;
+    font-size: 3.2rem;
     margin: 0 auto;
     max-width: 63rem;
     text-align: center;
     font-weight: 700;
     text-shadow: 4px 4px #1C1C1C;
+    margin-bottom: 4rem;
 }
 
-.custom-product-section .custom-product-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 .custom-product-section .custom-product-item {
-    max-width: 40rem;
-    margin: 0 2rem;
+    margin: 0 auto 4.8rem;
     border-radius: 4rem;
     background: #FFFCFA;
     position: relative;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     box-shadow: 13px 13px 0 0 #D55F4A;
@@ -36,35 +31,84 @@
 }
 
 .custom-product-section .custom-product-item .item-title {
-    font-size: 3.2rem;
+    font-size: 2rem;
     color: #1C1C1C;
     text-align: center;
     font-family: 'NewSpiritBold', sans-serif;
     font-weight: 700;
-    line-height: 1.2;
-    padding: 0 15px;
+    line-height: 1.25;
+    padding: 0 1.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .custom-product-section .custom-product-item .item-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #1C1C1C;
     flex-grow: 1;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .custom-product-section .custom-product-item .item-wrap {
     border: 1px solid #F4D5CD;
-    border-radius: 20px;
+    border-radius: 2rem;
     text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .custom-product-section .custom-product-item .item-header {
     border-radius: 18px 18px 0 0;
     background: #D55F4A;
+    line-height: 1.56;
+    color: #FFFCFA;
+}
+
+.custom-product-section .custom-product-item .button {
+    margin-top: 1.5rem;
+    min-height: calc(4rem + var(--buttons-border-width) * 2);
 }
 
 .custom-product-section .custom-product-item .item-price {
     color: #1F4692;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-family: 'NewSpiritBold', sans-serif;
     font-weight: 700;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+    .custom-product-section .custom-product-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .custom-product-section .custom-product-item {
+        max-width: 40rem;
+        margin: 0 2rem;
+        padding: 4rem;
+    }
+
+    .custom-product-section .custom-product-item .item-title {
+        font-size: 3.2rem;
+    }
+    .custom-product-section .custom-product-item .item-text {
+        font-size: 1.6rem;
+    }
+
+    .custom-product-section .custom-product-item .item-price {
+        font-size: 2.4rem;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .custom-product-section .custom-product-title {
+        font-size: 6rem;
+        margin-bottom: 5.6rem;
+    }
+
 }
