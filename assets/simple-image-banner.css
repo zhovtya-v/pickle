@@ -1,0 +1,28 @@
+.simple-image-banner-section {
+
+}
+
+.simple-image-banner-section .image-banner-wrap {
+    position: relative;
+    aspect-ratio: 1/1.24;
+    overflow: hidden;
+}
+
+.simple-image-banner-section .image-banner-wrap img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .simple-image-banner-section .image-banner-wrap {
+        aspect-ratio: 1.79/1;
+    }
+}

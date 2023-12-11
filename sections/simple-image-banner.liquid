@@ -1,0 +1,116 @@
+{{ 'simple-image-banner.css' | asset_url | stylesheet_tag }}
+
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    .simple-image-banner-{{ section.id }} .image-banner-wrap {
+        border-radius: {{ section.settings.block_border_radius }}px;
+        box-shadow: 10px 10px {{ section.settings.block_border_color }};
+        margin-right: 10px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+        .simple-image-banner-{{ section.id }} .image-banner-wrap {
+            border-radius: {{ section.settings.block_border_radius }}px;
+            box-shadow: 12px 12px {{ section.settings.block_border_color }};
+            margin-right: 12px;
+        }
+    }
+{%- endstyle -%}
+
+<div class="simple-image-banner-{{ section.id }} section-{{ section.id }}-padding">
+    <div class="page-width">
+        <div class="image-banner-wrap">
+            <img loading="lazy" src="{{ section.settings.image | image_url }}" alt="image">
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+
+{
+    "name": "Simple image banner",
+    "tag": "section",
+    "class": "section simple-image-banner-section",
+    "settings":
+    [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image banner"
+        },
+        {
+            "type": "header",
+            "content": "Block scheme"
+        },
+        {
+            "type": "color",
+            "id": "block_background_color",
+            "label": "Background color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "checkbox",
+            "id": "block_has_shadow",
+            "default": false,
+            "label": "Image has shadow"
+        },
+        {
+            "type": "color",
+            "id": "block_border_color",
+            "label": "Shadow color",
+            "default": "#000000"
+        },
+        {
+            "type": "range",
+            "id": "block_border_radius",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Image border radius",
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 100
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 36
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "Simple image banner"
+        }
+    ]
+}
+
+{% endschema %}

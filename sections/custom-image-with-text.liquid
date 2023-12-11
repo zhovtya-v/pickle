@@ -12,6 +12,16 @@
     color: {{ section.settings.color_text }};
     border-color: {{ section.settings.border_color }};
   }
+
+  .section-{{ section.id }}-padding .image-with-text__content .image-with-text__heading {
+    font-size: calc({{ section.settings.mob_size_title }}px + ({{ section.settings.desk_size_title }} - {{ section.settings.mob_size_title }}) * ((100vw - 375px) / (1440 - 375)));
+  }
+
+  .section-{{ section.id }}-padding .image-with-text__content .image-with-text__text {
+    font-size: calc({{ section.settings.mob_size_text }}px + ({{ section.settings.desk_size_text }} - {{ section.settings.mob_size_text }}) * ((100vw - 375px) / (1440 - 375)));
+  }
+
+
   .section-{{ section.id }}-padding .image-with-text__content .button:before {
     box-shadow: 4px 4px 0 0 {{ section.settings.border_color }};
   }
@@ -20,13 +30,22 @@
     background: {{ section.settings.block_background_color }};
     border-radius: {{ section.settings.block_border_radius }}px;
     border-color: {{ section.settings.block_border_color }};
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   }
+
   .custom-image-with-text-{{ section.id }} .image-with-text__media {
     border-radius: {{ section.settings.image_border_radius }}px;
+  }
+
+  .custom-image-with-text-{{ section.id }}.custom-image-with-image-border .image-with-text .image-with-text__media-item>* {
+    border-radius: {{ section.settings.image_border_radius }}px;
+    box-shadow: 12px 12px {{ section.settings.image_border_color }} !important;
+    border: 3px solid {{ section.settings.image_border_color }};
+    margin-right: 12px;
   }
 
   @media screen and (min-width: 750px) {
@@ -44,7 +63,21 @@
       padding-left: {{ section.settings.block_padding_left | times: 0.75 | round: 0 }}px;
       padding-right: {{ section.settings.block_padding_right | times: 0.75 | round: 0 }}px;
     }
+
+    .custom-image-with-text-{{ section.id }} .image-with-text {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .custom-image-with-text-{{ section.id }}.custom-image-with-image-border .image-with-text .image-with-text__media-item>* {
+      box-shadow: 14px 14px {{ section.settings.image_border_color }} !important;
+      margin-right: 14px;
+    }
+
   }
+
   @media screen and (min-width: 1301px) {
     .section-{{ section.id }} .page-width {
         padding: 0;
@@ -62,13 +95,13 @@
   endif
 -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-image-with-text-{{ section.id }} custom-image-with-text">
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-image-with-text-{{ section.id }} custom-image-with-text custom-image-with-image-{%- if section.settings.image_border != blank -%}border{%- endif -%}">
   <div class="page-width">
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.block_border %} block-border{% endif %}">
       <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
           <div
-            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %} "
             {% if section.settings.height == 'adapt' and section.settings.image != blank %}
               style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
             {% endif %}
@@ -168,6 +201,18 @@
       "unit": "px",
       "label": "Image border radius",
       "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "image_border",
+      "default": false,
+      "label": "Image has border"
+    },
+    {
+      "type": "color",
+      "id": "image_border_color",
+      "label": "Image border color",
+      "default": "#000000"
     },
     {
       "type": "select",
@@ -286,6 +331,46 @@
       ],
       "default": "no-overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
+    },
+    {
+      "type": "range",
+      "id": "mob_size_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mob size title",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "desk_size_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop size title",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mob_size_text",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mob size text",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "desk_size_text",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop size text",
+      "default": 24
     },
     {
       "type": "color_scheme",

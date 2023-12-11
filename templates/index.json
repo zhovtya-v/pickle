@@ -51,58 +51,34 @@
     "fd130b8f-c31a-4e77-abc7-7d3de54d85f9": {
       "type": "scrolling-text",
       "blocks": {
-        "086f0e27-fb87-4da2-ad6f-e822497bcf34": {
-          "type": "header",
+        "9712699e-072f-4d08-b19b-7f3a4e098dc1": {
+          "type": "text",
           "settings": {
-            "message": "Dinks 'n Drinks"
-          }
-        },
-        "a11ae869-6dfa-4222-bbd0-997b13cf3124": {
-          "type": "header",
-          "settings": {
-            "message": "Recreationally Active"
-          }
-        },
-        "30f8c12e-6a17-4bb2-96e2-3b0dbf5e9144": {
-          "type": "header",
-          "settings": {
-            "message": "Sideline Heroes"
-          }
-        },
-        "f8b6e402-9e23-4d06-88ce-798ac5eae2c4": {
-          "type": "header",
-          "settings": {
-            "message": "Dinks 'n Drinks"
-          }
-        },
-        "19b49894-891e-4010-8964-257ca8efc34e": {
-          "type": "header",
-          "settings": {
-            "message": "Recreationally Active"
-          }
-        },
-        "8299f07e-e9a3-4304-95ed-6b4ddbadb7ef": {
-          "type": "header",
-          "settings": {
-            "message": "Sideline Heroes"
+            "separator": "shopify:\/\/shop_images\/star-b.png",
+            "message_1": "Dinks 'n Drinks",
+            "message_2": "Recreationally Active",
+            "message_3": "Sideline Heroes",
+            "message_4": "",
+            "message_5": "",
+            "message_6": "",
+            "message_7": "",
+            "message_8": ""
           }
         }
       },
       "block_order": [
-        "086f0e27-fb87-4da2-ad6f-e822497bcf34",
-        "a11ae869-6dfa-4222-bbd0-997b13cf3124",
-        "30f8c12e-6a17-4bb2-96e2-3b0dbf5e9144",
-        "f8b6e402-9e23-4d06-88ce-798ac5eae2c4",
-        "19b49894-891e-4010-8964-257ca8efc34e",
-        "8299f07e-e9a3-4304-95ed-6b4ddbadb7ef"
+        "9712699e-072f-4d08-b19b-7f3a4e098dc1"
       ],
       "settings": {
+        "section_background": "#d55f4a",
         "two_tapes": false,
         "speed": "4",
         "colorText": "#ffffff",
+        "colorText_2": "#ffffff",
         "desk_message_size": 32,
         "mob_message_size": 18,
-        "section_background": "#d55f4a",
+        "tapes_background": "#d55f4a",
+        "tapes_background_2": "#ffffff",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -253,59 +229,43 @@
     "75016146-8ac2-4674-8495-e1c1afda86f8": {
       "type": "scrolling-text",
       "blocks": {
-        "90e8a775-ad54-40a9-881a-274b51042844": {
-          "type": "header",
+        "78f64272-5745-4089-80c3-171eefc25fd7": {
+          "type": "text",
           "settings": {
-            "message": "Fun for all, all for fun"
-          }
-        },
-        "7cbac5c4-1d0c-4922-8ce8-b02e6af26ff4": {
-          "type": "header",
-          "settings": {
-            "message": "Fun for all, all for fun"
-          }
-        },
-        "4094ef8d-53fb-450b-a44f-4bbf0bb011f4": {
-          "type": "header",
-          "settings": {
-            "message": "Fun for all, all for fun"
-          }
-        },
-        "c698c103-f0ef-4f5d-a658-60eaf7d62ecd": {
-          "type": "header",
-          "settings": {
-            "message": "Fun for all, all for fun"
-          }
-        },
-        "fb267499-25b0-4ea3-87fb-01d01360e2cb": {
-          "type": "header",
-          "settings": {
-            "message": "Fun for all, all for fun"
+            "separator": "shopify:\/\/shop_images\/star-r.png",
+            "message_1": "Fun for all, all for fun",
+            "message_2": "Fun for all, all for fun",
+            "message_3": "Fun for all, all for fun",
+            "message_4": "Fun for all, all for fun",
+            "separator_2": "shopify:\/\/shop_images\/star-y.png",
+            "message_5": "Fun for all, all for fun",
+            "message_6": "Fun for all, all for fun",
+            "message_7": "Fun for all, all for fun",
+            "message_8": "Fun for all, all for fun"
           }
         }
       },
       "block_order": [
-        "90e8a775-ad54-40a9-881a-274b51042844",
-        "7cbac5c4-1d0c-4922-8ce8-b02e6af26ff4",
-        "4094ef8d-53fb-450b-a44f-4bbf0bb011f4",
-        "c698c103-f0ef-4f5d-a658-60eaf7d62ecd",
-        "fb267499-25b0-4ea3-87fb-01d01360e2cb"
+        "78f64272-5745-4089-80c3-171eefc25fd7"
       ],
       "settings": {
+        "section_background": "#1f4794",
         "two_tapes": true,
-        "speed": "3",
+        "speed": "4",
         "colorText": "#1f4692",
+        "colorText_2": "#fffcfa",
         "desk_message_size": 32,
         "mob_message_size": 16,
-        "section_background": "#fff6ee",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "tapes_background": "#fff6ee",
+        "tapes_background_2": "#d55f4a",
+        "padding_top": 14,
+        "padding_bottom": 14
       }
     },
     "7e7e4342-f833-4256-a075-83f356dd9ba5": {
       "type": "section-custom-product",
       "settings": {
-        "padding_top": 20,
+        "padding_top": 90,
         "padding_bottom": 136
       }
     },

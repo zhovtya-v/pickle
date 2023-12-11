@@ -2,36 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b40299-0c87-4a95-afff-12d7f6e0c79b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/Birdie-BF64f700fb417a3.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/New Spirit Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/New Spirit Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/New Spirit Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/New Spirit Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/New Spirit SemiBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/NewSpirit-MediumCondensed.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/assets/NewSpirit-MediumCondensed.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/simple-image-banner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/tooltip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sections/simple-image-banner.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/component-custom-image-with-text.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-custom-image-with-text.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-list-social.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-list-social.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/custom-section-multicolumn.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom-section-multicolumn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scrolling-text-section.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scrolling-text-section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-custom-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-custom-product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-image-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-image-banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-multicolumn.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-multicolumn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/section-rich-text.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-rich-text.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/custom-image-with-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/custom-image-with-text.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/custom-multicolumn.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/custom-multicolumn.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/footer-group.json" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer-group.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header-group.json" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header-group.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-facebook.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-facebook.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-hamburger.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-hamburger.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-instagram.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-instagram.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-twitter.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-twitter.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/rich-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/rich-text.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/scrolling-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/scrolling-text.liquid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,15 +42,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Job\ElementorLab\jipsy-pickle" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Job\ElementorLab\jipsy-pickle\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Job\ElementorLab\jipsy-pickle\assets" />
+      <recent name="D:\Job\ElementorLab\jipsy-pickle" />
       <recent name="D:\Job\ElementorLab\jipsy-pickle\sections" />
     </key>
   </component>
@@ -84,29 +68,62 @@
       <workItem from="1701693490321" duration="16422000" />
       <workItem from="1701761028059" duration="27474000" />
       <workItem from="1701864662440" duration="306000" />
+      <workItem from="1702288137141" duration="5584000" />
+      <workItem from="1702303664883" duration="6907000" />
     </task>
+    <task id="LOCAL-00001" summary="update from live">
+      <created>1702042196412</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702042196412</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update from live">
+      <created>1702064264751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702064264751</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update from live" />
+    <option name="LAST_COMMIT_MESSAGE" value="update from live" />
   </component>
   <component name="WindowStateProjectService">
     <state x="792" y="409" width="651" height="485" key="#Liquid" timestamp="1701702474389">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="792" y="409" width="651" height="485" key="#Liquid/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1701702474389" />
+    <state x="585" y="84" key="CommitChangelistDialog2" timestamp="1702064264114">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="585" y="84" key="CommitChangelistDialog2/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1702064264114" />
+    <state x="92" y="92" width="1736" height="848" key="DiffContextDialog" timestamp="1702050551951">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="92" y="92" width="1736" height="848" key="DiffContextDialog/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1702050551951" />
     <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1701864698178">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1701864698178" />
-    <state x="74" y="147" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1701695967038">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1702064266528">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="74" y="147" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1701695967038" />
-    <state x="529" y="144" width="884" height="718" key="find.popup" timestamp="1701798844928">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1702064266528" />
+    <state x="74" y="147" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1702305359881">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="529" y="144" width="884" height="718" key="find.popup/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1701798844928" />
+    <state x="74" y="147" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1702305359881" />
+    <state x="529" y="144" width="884" height="718" key="find.popup" timestamp="1702307176976">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="529" y="144" width="884" height="718" key="find.popup/0.0.1920.1032/0.-1080.1920.1032@0.0.1920.1032" timestamp="1702307176976" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1701709724580">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

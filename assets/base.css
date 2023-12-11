@@ -147,9 +147,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 @media screen and (min-width: 750px) {
-  .page-width {
+  /*.page-width {
     padding: 0 5rem;
-  }
+  }*/
 
   .header.page-width,
   .utility-bar__grid.page-width {
@@ -183,6 +183,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
   .page-width-desktop {
     max-width: var(--page-width);
+    padding: 0 5rem;
+  }
+
+  .page-width {
     padding: 0 5rem;
   }
 }
@@ -908,7 +912,7 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);

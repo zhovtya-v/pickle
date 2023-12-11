@@ -1,0 +1,222 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 28
+      }
+    },
+    "de86d273-f34c-4a7f-aad8-8700c97a4837": {
+      "type": "simple-image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/photo.jpg",
+        "block_background_color": "#ffffff",
+        "block_has_shadow": false,
+        "block_border_color": "#d55f4a",
+        "block_border_radius": 40,
+        "padding_top": 200,
+        "padding_bottom": 36
+      }
+    },
+    "5c1595f7-26b5-4c43-b07a-e948b3a4a148": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14708934934610__5c1595f7-26b5-4c43-b07a-e948b3a4a148-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obviously we have top of the line professional sized pickleball courts, but first and foremost Tipsy Pickle is a place for good food, good drinks, and a good time!",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--14708934934610__5c1595f7-26b5-4c43-b07a-e948b3a4a148-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "max_width": 118,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "a17668da-e57e-46d7-b91e-501d97140111": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Pickleball not<br\/>Quite your<br\/> Thing?<\/p>",
+            "heading_color": "#1f4692",
+            "heading_size": "h1"
+          }
+        },
+        "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We also have golf simulators, cornhole, and much more to keep every friend in the group happy. If you want to slam a local beer while Picklin with your friends, or crush picklebacks and fried pickles while you watch your homies, Tipsy Pickle is your new neighborhood hang out<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-heading-1",
+        "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-text-1"
+      ],
+      "settings": {
+        "image_border_radius": 30,
+        "image_border": true,
+        "image_border_color": "#000000",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "background-1",
+        "color_text": "#000000",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "block_background_color": "rgba(0,0,0,0)",
+        "block_border": false,
+        "block_border_color": "#000000",
+        "block_border_radius": 0,
+        "block_padding_top": 0,
+        "block_padding_right": 0,
+        "block_padding_left": 0,
+        "block_padding_bottom": 0,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "413b2b9e-753f-49f5-8cc3-61991116c14d": {
+      "type": "scrolling-text",
+      "blocks": {
+        "template--14708934934610__413b2b9e-753f-49f5-8cc3-61991116c14d-text-1": {
+          "type": "text",
+          "settings": {
+            "separator": "shopify:\/\/shop_images\/Ellipse_483.svg",
+            "message_1": "Drinks ‘N Dinks",
+            "message_2": "Drinks ‘N Dinks",
+            "message_3": "Drinks ‘N Dinks",
+            "message_4": "Drinks ‘N Dinks",
+            "message_5": "",
+            "message_6": "",
+            "message_7": "",
+            "message_8": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14708934934610__413b2b9e-753f-49f5-8cc3-61991116c14d-text-1"
+      ],
+      "settings": {
+        "section_background": "#ffffff",
+        "has_border": true,
+        "border_color": "#1f4692",
+        "two_tapes": false,
+        "speed": "4",
+        "colorText": "#ffffff",
+        "colorText_2": "#ffffff",
+        "desk_message_size": 32,
+        "mob_message_size": 18,
+        "tapes_background": "#f4be18",
+        "tapes_background_2": "#ffffff",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "e5ba165b-46fb-40bd-a89d-bb66cee4a957": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "template--14708934934610__e5ba165b-46fb-40bd-a89d-bb66cee4a957-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>No Matter<\/p>",
+            "heading_color": "#d55f4a",
+            "heading_size": "h1"
+          }
+        },
+        "template--14708934934610__e5ba165b-46fb-40bd-a89d-bb66cee4a957-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>if it was the promise of cocktails or competition that gets you through the door, it will be the good times and new way to pass your time with friends that makes you stay.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14708934934610__e5ba165b-46fb-40bd-a89d-bb66cee4a957-heading-1",
+        "template--14708934934610__e5ba165b-46fb-40bd-a89d-bb66cee4a957-text-1"
+      ],
+      "settings": {
+        "image_border_radius": 20,
+        "image_border": false,
+        "image_border_color": "#000000",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "color_text": "#000000",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "block_background_color": "#fffcfa",
+        "block_border": true,
+        "block_border_color": "#d55f4a",
+        "block_border_radius": 40,
+        "block_padding_top": 40,
+        "block_padding_right": 40,
+        "block_padding_left": 40,
+        "block_padding_bottom": 40,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "d01809e7-d3c5-42b5-8ada-e21997dd5bba": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14708934934610__d01809e7-d3c5-42b5-8ada-e21997dd5bba-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tipsy Pickle is a spot where everyone in the neighborhood can unwind and relax-however that looks for them. Whether that means a little friendly competition or cementing your spot as a sideline hero.",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--14708934934610__d01809e7-d3c5-42b5-8ada-e21997dd5bba-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "max_width": 118,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "de86d273-f34c-4a7f-aad8-8700c97a4837",
+    "5c1595f7-26b5-4c43-b07a-e948b3a4a148",
+    "a17668da-e57e-46d7-b91e-501d97140111",
+    "413b2b9e-753f-49f5-8cc3-61991116c14d",
+    "e5ba165b-46fb-40bd-a89d-bb66cee4a957",
+    "d01809e7-d3c5-42b5-8ada-e21997dd5bba"
+  ]
+}

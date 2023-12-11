@@ -16,8 +16,10 @@
     }
 
     .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
-        font-size: {{ section.settings.mob_message_size }}px;
+        {% comment %}font-size: {{ section.settings.mob_message_size }}px;{% endcomment %}
         color: {{ section.settings.colorText }};
+
+        font-size: calc({{ section.settings.mob_message_size }}px + ({{ section.settings.desk_message_size }} - {{ section.settings.mob_message_size }}) * ((100vw - 375px) / (1440 - 375)));
     }
 
     .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar-2 .message {
@@ -30,20 +32,30 @@
         overflow: hidden;
     }
 
+    .scrolling-text-bar-section-{{ section.id }}.scrolling-text-bar-border .scrolling-text-bar {
+        border-top: 2px solid {{ section.settings.border_color }};
+        border-bottom: 2px solid {{ section.settings.border_color }};
+    }
+
     @media screen and (min-width: 750px) {
         .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar, .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar-2 {
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
 
-        .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
+        {% comment %}.scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
             font-size: {{ section.settings.desk_message_size }}px;
+        }{% endcomment %}
+
+        .scrolling-text-bar-section-{{ section.id }}.scrolling-text-bar-border .scrolling-text-bar {
+            border-top-width: 4px;
+            border-bottom-width: 4px;
         }
     }
 {%- endstyle -%}
 
-<div class="scrolling-text-bar-section-{{ section.id }}">
-    <div class="scrolling-text-bar-wrap scrolling-text-bar-wrap-{%- if section.settings.two_tapes != blank -%} has-two-tapes{%- endif -%}">
+<div class="scrolling-text-bar-section-{{ section.id }} {%- if section.settings.has_border != blank -%} scrolling-text-bar-border {%- endif -%}">
+    <div class="scrolling-text-bar-wrap scrolling-text-bar-wrap-{%- if section.settings.two_tapes != blank -%} has-two-tapes{%- endif -%} ">
         {%- if section.settings.two_tapes != blank -%}
             <div class="scrolling-text-bar scrolling-text-messages scrolling-text-bar-1" data-speed="{{ section.settings.speed }}">
                 <div class="message-wrap">
@@ -115,6 +127,22 @@
                 "type": "color",
                 "id": "section_background",
                 "label": "Section background",
+                "default": "#ffffff"
+            },
+            {
+                "type": "header",
+                "content": "Has border"
+            },
+            {
+                "type": "checkbox",
+                "id": "has_border",
+                "default": false,
+                "label": "Has border"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "Border color",
                 "default": "#ffffff"
             },
             {
