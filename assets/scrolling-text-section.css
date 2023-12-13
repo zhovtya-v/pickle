@@ -35,7 +35,7 @@
 
 .scrolling-text-bar-wrap-has-two-tapes {
     position: relative;
-    height: 24rem;
+    height: 18rem;
 }
 
 .scrolling-text-bar-wrap-has-two-tapes .scrolling-text-bar {
@@ -71,5 +71,9 @@
 
     .scrolling-text-bar .message {
         padding: 0 4rem;
+    }
+
+    .scrolling-text-bar-wrap-has-two-tapes {
+        height: 24rem;
     }
 }

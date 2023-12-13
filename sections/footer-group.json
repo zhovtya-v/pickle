@@ -5,13 +5,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "01aa5f39-3e54-40f6-ba6c-3e5acebfe790": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p>201 Camp Road Charlotte NC 28206<br\/>Phone number - 443-744-2929<br\/>tanner@tipsypickle.com<\/p>"
-          }
-        },
         "26fcd792-ef83-4e43-990c-6b8260d5cb60": {
           "type": "link_list",
           "settings": {
@@ -35,7 +28,6 @@
         }
       },
       "block_order": [
-        "01aa5f39-3e54-40f6-ba6c-3e5acebfe790",
         "26fcd792-ef83-4e43-990c-6b8260d5cb60",
         "14f85614-ab8a-482c-ba65-29041b39ee8f",
         "3e5bfbda-50f8-4e16-9ae3-126a4b7261b2"

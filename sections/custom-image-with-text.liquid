@@ -11,6 +11,14 @@
     background: {{ section.settings.background_color }};
     color: {{ section.settings.color_text }};
     border-color: {{ section.settings.border_color }};
+    box-shadow: 3px 3px {{ section.settings.border_color }};
+  }
+
+  .section-{{ section.id }}-padding .image-with-text__content .button:hover {
+    border-color: transparent;
+    background: {{ section.settings.border_color }};
+    color: {{ section.settings.background_color }};
+    box-shadow: 3px 3px {{ section.settings.background_color }};
   }
 
   .section-{{ section.id }}-padding .image-with-text__content .image-with-text__heading {
@@ -22,19 +30,18 @@
   }
 
 
-  .section-{{ section.id }}-padding .image-with-text__content .button:before {
-    box-shadow: 4px 4px 0 0 {{ section.settings.border_color }};
-  }
-
   .custom-image-with-text-{{ section.id }} .image-with-text {
     background: {{ section.settings.block_background_color }};
     border-radius: {{ section.settings.block_border_radius }}px;
-    border-color: {{ section.settings.block_border_color }};
+    border: 0.3rem solid {{ section.settings.block_border_color }};
 
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+    box-shadow: 1rem 1rem 0 0 {{ section.settings.block_border_color }};
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 12px;
   }
 
   .custom-image-with-text-{{ section.id }} .image-with-text__media {
@@ -58,17 +65,12 @@
       background: {{ section.settings.block_background_color }};
       border-radius: {{ section.settings.block_border_radius }}px;
       border-color: {{ section.settings.block_border_color }};
-      padding-top: {{ section.settings.block_padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.block_padding_bottom | times: 0.75 | round: 0 }}px;
-      padding-left: {{ section.settings.block_padding_left | times: 0.75 | round: 0 }}px;
-      padding-right: {{ section.settings.block_padding_right | times: 0.75 | round: 0 }}px;
-    }
+      padding-top: {{ section.settings.block_padding_top}}px;
+      padding-bottom: {{ section.settings.block_padding_bottom }}px;
+      padding-left: {{ section.settings.block_padding_left }}px;
+      padding-right: {{ section.settings.block_padding_right }}px;
 
-    .custom-image-with-text-{{ section.id }} .image-with-text {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
+      box-shadow: 1.2rem 1.2rem 0 0 {{ section.settings.block_border_color }};
     }
 
     .custom-image-with-text-{{ section.id }}.custom-image-with-image-border .image-with-text .image-with-text__media-item>* {

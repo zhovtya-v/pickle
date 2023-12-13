@@ -2,6 +2,11 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  min-height: 90vh;
+}
+
+.banner .media>img {
+  object-position: 80%;
 }
 
 .banner__box {
@@ -20,6 +25,9 @@
 
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -81,6 +89,11 @@
 @media screen and (min-width: 750px) {
   .banner {
     flex-direction: row;
+    min-height: auto;
+  }
+
+  .banner .media>img {
+    object-position: center center;
   }
 
   .banner--small:not(.banner--adapt) {
@@ -354,14 +367,14 @@
 }
 
 .banner__box .subtitle {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   letter-spacing: 0;
   color: #FFFCFA;
   max-width: 457px;
   margin-bottom: 8px;
   text-align: left;
-
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 750px) {
@@ -372,6 +385,12 @@
     border-radius: 0;
     box-shadow: none;
   }
+
+  .banner__box .subtitle {
+    font-size: 1.6rem;
+    flex-grow: 0;
+  }
+
 
   .banner--desktop-transparent .button--secondary {
     --alpha-button-background: 0;

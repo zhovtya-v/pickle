@@ -2,15 +2,16 @@
     background: #FFF6EE;
 }
 
-.custom-image-with-text .block-border {
-    border: 0.3rem solid;
-    border-right-width: 1.5rem;
-    border-bottom-width: 1.5rem;
+.custom-image-with-text .image-with-text__media-item {
+    aspect-ratio: 283/307;
 }
 
+.custom-image-with-text .image-with-text__media-item .image-with-text__media {
+    height: auto;
+}
 
 .custom-image-with-text .image-with-text__heading {
-    font-size: 2.4rem;
+    line-height: 1.24;
 }
 
 .custom-image-with-text .image-with-text__heading p {
@@ -24,17 +25,24 @@
 
 
 .custom-image-with-text .image-with-text__content {
-    padding: 4rem calc(0rem / var(--font-body-scale)) 5rem;
+    padding: 1.3rem calc(0rem / var(--font-body-scale)) 1rem;
 }
 
-
 @media screen and (min-width: 750px) {
-    .custom-image-with-text .image-with-text__heading {
-        font-size: 3.2rem;
-    }
-
     .custom-image-with-text .image-with-text__content {
-        padding: 4rem calc(3rem / var(--font-body-scale)) 5rem calc(4rem / var(--font-body-scale));
+        padding: 2rem calc(3rem / var(--font-body-scale)) 2rem calc(7rem / var(--font-body-scale));
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .custom-image-with-text .image-with-text__media-item {
+        aspect-ratio: 182/250;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .custom-image-with-text .image-with-text__media-item {
+        aspect-ratio: 596/450;
     }
 }
 

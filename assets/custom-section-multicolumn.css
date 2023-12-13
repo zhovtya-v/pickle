@@ -1,6 +1,6 @@
 .custom-section-multicolumn {
     background-color: #FFF6EE;
-    background-image: url("./custom-multicolumn-section-bg.jpg");
+    background-image: url("./custom-multicolumn-section-bg-mob.png");
     background-position: center bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -17,8 +17,9 @@
     background: #FFFCFA;
     border-radius: 10rem;
     border: 0.1rem solid #1F4692;
-    border-right-width: 0.7rem;
-    border-bottom-width: 0.7rem;
+    /*border-right-width: 0.7rem;
+    border-bottom-width: 0.7rem;*/
+    box-shadow: 6px 6px 0 0 #1F4692;
     padding: 0 2.4rem;
 }
 
@@ -40,7 +41,7 @@
     font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 0;
-    text-shadow: 4px 4px #1f4692;
+    text-shadow: 3px 3px #1f4692;
     text-align: left;
 }
 
@@ -49,6 +50,16 @@
         font-size: 6rem;
         text-align: center;
         margin-bottom: 4.4rem;
+        text-shadow: 4px 4px #1f4692;
+    }
+
+    .custom-section-multicolumn {
+        background-color: #FFF6EE;
+        background-image: url("./custom-multicolumn-section-bg.jpg");
+        background-position: center bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-attachment: initial;
     }
 }
 

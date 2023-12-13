@@ -89,7 +89,7 @@
         "border_color": "#000000",
         "block_background_color": "rgba(0,0,0,0)",
         "block_border": false,
-        "block_border_color": "#000000",
+        "block_border_color": "rgba(0,0,0,0)",
         "block_border_radius": 0,
         "block_padding_top": 0,
         "block_padding_right": 0,
