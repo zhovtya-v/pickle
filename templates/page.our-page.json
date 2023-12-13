@@ -69,7 +69,7 @@
         "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-text-1"
       ],
       "settings": {
-        "image_border_radius": 30,
+        "image_border_radius": 40,
         "image_border": true,
         "image_border_color": "#d55f4a",
         "height": "small",
@@ -134,6 +134,7 @@
         "mob_message_size": 18,
         "tapes_background": "#f4be18",
         "tapes_background_2": "#ffffff",
+        "separator_width": 20,
         "padding_top": 8,
         "padding_bottom": 8
       }

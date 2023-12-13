@@ -3,6 +3,8 @@
   position: relative;
   flex-direction: column;
   min-height: 90vh;
+
+  min-height: 615px;
 }
 
 .banner .media>img {
@@ -289,7 +291,8 @@
 
 @media screen and (min-width: 750px) {
   .banner__content {
-    padding: 23rem 0 23rem 5rem;
+    padding: 23rem 0 23rem;
+    padding: 30rem 0 14rem 2rem;
   }
 
   .banner__content--top-left {
@@ -335,6 +338,16 @@
   .banner__content--bottom-right {
     align-items: flex-end;
     justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner__content {
+    padding: 30rem 0 14rem 5rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .banner__content {
+    padding: 30rem 0 14rem 1.6rem;
   }
 }
 
@@ -528,7 +541,7 @@
 
 @media screen and (min-width: 992px) {
   .banner__heading {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 

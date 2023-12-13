@@ -28,11 +28,6 @@
     align-items: center;
 }
 
-.scrolling-text-bar .message-separator img {
-    width: 2.4rem;
-    height: 2.4rem;
-}
-
 .scrolling-text-bar-wrap-has-two-tapes {
     position: relative;
     height: 18rem;
@@ -59,21 +54,18 @@
         padding: 0 5rem;
     }
 
-    .scrolling-text-bar .message:not(:last-child):after {
-        width: 4.4rem;
-        height: 4.4rem;
-    }
-
-    .scrolling-text-bar .message-separator img {
-        width: 4rem;
-        height: 4rem;
-    }
-
     .scrolling-text-bar .message {
         padding: 0 4rem;
     }
 
     .scrolling-text-bar-wrap-has-two-tapes {
         height: 24rem;
+    }
+}
+
+
+@media screen and (min-width: 1500px) {
+    .scrolling-text-bar-wrap-has-two-tapes {
+        height: 30rem;
     }
 }

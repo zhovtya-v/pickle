@@ -81,6 +81,8 @@
         "mob_message_size": 18,
         "tapes_background": "#d55f4a",
         "tapes_background_2": "#ffffff",
+        "separator_width": 40,
+        "mob_separator_width": 24,
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -268,6 +270,8 @@
         "mob_message_size": 16,
         "tapes_background": "#fff6ee",
         "tapes_background_2": "#d55f4a",
+        "separator_width": 40,
+        "mob_separator_width": 24,
         "padding_top": 14,
         "padding_bottom": 14
       }

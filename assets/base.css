@@ -2505,7 +2505,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
     }
 
     .header.header--middle-right {
-        padding: 4px 1rem;
+        padding: 1.1rem 1rem;
     }
 
     .banner__buttons {
@@ -2632,6 +2632,45 @@ product-info .loading__spinner:not(.hidden) ~ *,
     transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
+body.menu-drawer__open {
+    position: relative;
+}
+
+body.menu-drawer__open:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFCFA;
+    z-index: 2;
+}
+
+body.menu-drawer__open .header {
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+}
+
+body.menu-drawer__open .header__icon--cart {
+    display: none;
+}
+
+body.menu-drawer__open .header__icon {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+body.menu-drawer__open .header__icon .icon-close svg path, body.menu-drawer__open .header__icon:hover .icon path {
+    fill: #1C1C1C;
+}
+
+body.menu-drawer__open .header__icon--menu[aria-expanded=true]:before {
+    background: transparent;
+}
+
+
 @media screen and (max-width: 989px) {
     .header__heading,
     .header__heading-link {
@@ -2650,6 +2689,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
     .header__heading-logo {
         width: 132px;
+        aspect-ratio: auto 132 / 42;
     }
 }
 
@@ -2991,13 +3031,20 @@ details[open] > .header__submenu {
 .header__menu-item span {
     transition: border-bottom-color ease;
     border-bottom: 2px solid transparent;
-
 }
 
-.header__menu-item:hover span {
+.header__menu-item:hover span, .header__active-menu-item {
     /*text-decoration: underline;
     text-underline-offset: 0.3rem;*/
     border-bottom-color: #F4BE18;
+}
+
+span.header__active-menu-item {
+    /*transition: text-decoration-thickness var(--duration-short) ease;
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;*/
+    border-bottom: 2px solid #F4BE18;
 }
 
 details[open] > .header__menu-item {
@@ -3010,13 +3057,6 @@ details[open]:hover > .header__menu-item {
 
 details[open] > .header__menu-item .icon-caret {
     transform: rotate(180deg);
-}
-
-.header__active-menu-item {
-    transition: text-decoration-thickness var(--duration-short) ease;
-    color: rgb(var(--color-foreground));
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {

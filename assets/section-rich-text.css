@@ -91,43 +91,36 @@
 }
 
 .rich-text__heading-tooltip {
-  padding: 12px 26px 12px 29px;
+  padding: 11px 21px 11px 25px;
   text-transform: uppercase;
   border-radius: 24px;
   color: #1C1C1C;
   font-family: 'Birdie', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
   position: relative;
   background: #F4BE18;
   display: block;
-  max-width: 320px;
+  max-width: 240px;
   font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1440 - 375)));
 }
 
 .rich-text__heading-tooltip:after {
   content: '';
   position: absolute;
-  left: calc(100% - 22px);
-  bottom: calc(100% - 26px);
+  left: calc(100% - 26px);
+  bottom: calc(100% - 24px);
   background: url("./tooltip.svg") no-repeat;
   background-size: cover;
   width: 22px;
   height: 27px;
   z-index: -1;
-  transform: rotate(70deg) scale(1, -1);
+  transform: rotate(77deg) scale(1, -1);
 }
-
-
 
 @media screen and (min-width: 750px) {
   .rich-text__heading-tooltip {
     padding: 16px 26px 16px 29px;
-    text-transform: uppercase;
-    border-radius: 24px;
-    color: #1C1C1C;
-    font-family: 'Birdie', sans-serif;
-    font-size: 18px;
-    position: relative;
-    background: #F4BE18;
     margin-left: 28px;
     max-width: initial;
     display: inline-block;
@@ -143,4 +136,8 @@
     transform: none;
   }
 }
-
+@media screen and (min-width: 1441px) {
+  .rich-text__heading {
+    font-size: 6rem;
+  }
+}

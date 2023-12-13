@@ -16,7 +16,6 @@
     }
 
     .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
-        {% comment %}font-size: {{ section.settings.mob_message_size }}px;{% endcomment %}
         color: {{ section.settings.colorText }};
 
         font-size: calc({{ section.settings.mob_message_size }}px + ({{ section.settings.desk_message_size }} - {{ section.settings.mob_message_size }}) * ((100vw - 375px) / (1440 - 375)));
@@ -32,6 +31,11 @@
         overflow: hidden;
     }
 
+    .scrolling-text-bar .message-separator img {
+        width: {{ section.settings.mob_separator_width }}px;
+        height: {{ section.settings.mob_separator_width }}px;
+    }
+
     .scrolling-text-bar-section-{{ section.id }}.scrolling-text-bar-border .scrolling-text-bar {
         border-top: 2px solid {{ section.settings.border_color }};
         border-bottom: 2px solid {{ section.settings.border_color }};
@@ -43,13 +47,20 @@
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
 
-        {% comment %}.scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
-            font-size: {{ section.settings.desk_message_size }}px;
-        }{% endcomment %}
-
         .scrolling-text-bar-section-{{ section.id }}.scrolling-text-bar-border .scrolling-text-bar {
             border-top-width: 4px;
             border-bottom-width: 4px;
+        }
+
+        .scrolling-text-bar .message-separator img {
+            width: {{ section.settings.separator_width }}px;
+            height: {{ section.settings.separator_width }}px;
+        }
+    }
+
+    @media screen and (min-width: 1441px) {
+        .scrolling-text-bar-section-{{ section.id }} .scrolling-text-bar .message {
+            font-size: {{ section.settings.desk_message_size }}px;
         }
     }
 {%- endstyle -%}
@@ -63,13 +74,13 @@
                         {% case block.type %}
                             {% when 'text' %}
                                 {%- if block.settings.message_1 != blank -%}<span class="message">{{ block.settings.message_1 }}</span>{% endif %}
-                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_2 != blank -%}<span class="message">{{ block.settings.message_2 }}</span>{% endif %}
-                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_3 != blank -%}<span class="message">{{ block.settings.message_3 }}</span>{% endif %}
-                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_4 != blank -%}<span class="message">{{ block.settings.message_4 }}</span>{% endif %}
-                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                         {% endcase %}
                     {%- endfor -%}
                 </div>
@@ -80,13 +91,13 @@
                         {% case block.type %}
                             {% when 'text' %}
                                 {%- if block.settings.message_5 != blank -%}<span class="message">{{ block.settings.message_5 }}</span>{% endif %}
-                                {%- if block.settings.message_5 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_5 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_6 != blank -%}<span class="message">{{ block.settings.message_6 }}</span>{% endif %}
-                                {%- if block.settings.message_6 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_6 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_7 != blank -%}<span class="message">{{ block.settings.message_7 }}</span>{% endif %}
-                                {%- if block.settings.message_7 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_7 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_8 != blank -%}<span class="message">{{ block.settings.message_8 }}</span>{% endif %}
-                                {%- if block.settings.message_8 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_8 != blank -%}<span class="message-separator">{{ block.settings.separator_2 | image_url: width: 50 | image_tag }}</span>{% endif %}
                         {% endcase %}
                     {%- endfor -%}
                 </div>
@@ -98,13 +109,13 @@
                         {% case block.type %}
                             {% when 'text' %}
                                 {%- if block.settings.message_1 != blank -%}<span class="message">{{ block.settings.message_1 }}</span>{% endif %}
-                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_1 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_2 != blank -%}<span class="message">{{ block.settings.message_2 }}</span>{% endif %}
-                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_2 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_3 != blank -%}<span class="message">{{ block.settings.message_3 }}</span>{% endif %}
-                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_3 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                                 {%- if block.settings.message_4 != blank -%}<span class="message">{{ block.settings.message_4 }}</span>{% endif %}
-                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 40 | image_tag }}</span>{% endif %}
+                                {%- if block.settings.message_4 != blank -%}<span class="message-separator">{{ block.settings.separator | image_url: width: 50 | image_tag }}</span>{% endif %}
                         {% endcase %}
                     {%- endfor -%}
                 </div>
@@ -204,6 +215,26 @@
                 "id": "tapes_background_2",
                 "label": "The text background of the second tapes",
                 "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "separator_width",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "Separator width",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "mob_separator_width",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "Mob separator width",
+                "default": 20
             },
             {
                 "type": "header",

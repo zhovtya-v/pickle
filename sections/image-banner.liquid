@@ -27,6 +27,21 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+
+  @media screen and (max-width: 749px) {
+    {%- if section.settings.image_mob_bg != blank -%}
+      #Banner-{{ section.id }} .media>img {
+        display: none;
+      }
+
+      #Banner-{{ section.id }} .banner__media.media {
+        background: url({{ section.settings.image_mob_bg | image_url }}) no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+      }
+
+    {%- endif -%}
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -184,6 +199,11 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mob_bg",
+      "label": "Image mobile background"
     },
     {
       "type": "range",

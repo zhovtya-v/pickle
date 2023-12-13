@@ -1,14 +1,12 @@
-.simple-image-banner-section {
-
-}
-
 .simple-image-banner-section .image-banner-wrap {
     position: relative;
     aspect-ratio: 1/1.24;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
-.simple-image-banner-section .image-banner-wrap img {
+/*.simple-image-banner-section .image-banner-wrap img {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -17,9 +15,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-
-
+}*/
 
 @media screen and (min-width: 768px) {
     .simple-image-banner-section .image-banner-wrap {
