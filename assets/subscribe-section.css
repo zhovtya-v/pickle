@@ -22,6 +22,9 @@
     min-height: 428px;
     min-height: 470px;
     align-items: center;
+
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
 }
 
 .subscribe-wrap .subscribe-column.swiper-slide:nth-child(odd) {

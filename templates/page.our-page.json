@@ -12,7 +12,8 @@
       "type": "simple-image-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/photo.jpg",
-        "block_background_color": "#ffffff",
+        "mob_image": "shopify:\/\/shop_images\/photo-mob.jpg",
+        "section_background_color": "#fffcfa",
         "block_has_shadow": false,
         "block_border_color": "#d55f4a",
         "block_border_radius": 40,
@@ -35,10 +36,14 @@
       "block_order": [
         "template--14708934934610__5c1595f7-26b5-4c43-b07a-e948b3a4a148-heading-1"
       ],
+      "custom_css": [
+        "section {background-color: #fffcfa;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
+        "section_background_color": "#fffcfa",
         "full_width": true,
         "max_width": 120,
         "padding_top": 40,
@@ -51,7 +56,7 @@
         "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Pickleball not<br\/>Quite your<br\/> Thing?<\/p>",
+            "heading": "<p>Pickleball not <br\/>Quite your<br\/> Thing?<\/p>",
             "heading_color": "#1f4692",
             "heading_size": "h0"
           }
@@ -69,9 +74,11 @@
         "template--14708934934610__a17668da-e57e-46d7-b91e-501d97140111-text-1"
       ],
       "settings": {
+        "section_background_color": "#fffcfa",
         "image_border_radius": 40,
         "image_border": true,
         "image_border_color": "#d55f4a",
+        "left_indent": 94,
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -80,8 +87,14 @@
         "content_layout": "no-overlap",
         "mob_size_title": 32,
         "desk_size_title": 60,
+        "mob_indent_top_title": 32,
+        "mob_indent_bottom_title": 0,
+        "desk_indent_top_title": 32,
+        "desk_indent_bottom_title": 2,
         "mob_size_text": 16,
         "desk_size_text": 24,
+        "mob_indent_top_text": 32,
+        "desk_indent_bottom_text": 60,
         "section_color_scheme": "",
         "color_scheme": "background-1",
         "color_text": "#000000",
@@ -135,6 +148,7 @@
         "tapes_background": "#f4be18",
         "tapes_background_2": "#ffffff",
         "separator_width": 20,
+        "mob_separator_width": 20,
         "padding_top": 8,
         "padding_bottom": 8
       }
@@ -163,9 +177,11 @@
         "template--14708934934610__e5ba165b-46fb-40bd-a89d-bb66cee4a957-text-1"
       ],
       "settings": {
+        "section_background_color": "#fff6ee",
         "image_border_radius": 20,
         "image_border": false,
         "image_border_color": "#000000",
+        "left_indent": 106,
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -174,8 +190,14 @@
         "content_layout": "no-overlap",
         "mob_size_title": 32,
         "desk_size_title": 60,
+        "mob_indent_top_title": 32,
+        "mob_indent_bottom_title": 0,
+        "desk_indent_top_title": 46,
+        "desk_indent_bottom_title": 0,
         "mob_size_text": 16,
         "desk_size_text": 24,
+        "mob_indent_top_text": 32,
+        "desk_indent_bottom_text": 60,
         "section_color_scheme": "",
         "color_scheme": "",
         "color_text": "#000000",
@@ -186,9 +208,9 @@
         "block_border_color": "#d55f4a",
         "block_border_radius": 40,
         "block_padding_top": 40,
-        "block_padding_right": 40,
+        "block_padding_right": 28,
         "block_padding_left": 40,
-        "block_padding_bottom": 40,
+        "block_padding_bottom": 28,
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 120,
@@ -203,7 +225,7 @@
           "settings": {
             "heading": "Tipsy Pickle is a spot where everyone in the neighborhood can unwind and relax-however that looks for them. Whether that means a little friendly competition or cementing your spot as a sideline hero.",
             "heading_size": "h0",
-            "tooltip": "Here, everyone is a big dill.!"
+            "tooltip": "Here, everyone is a big dill!"
           }
         }
       },
@@ -214,6 +236,7 @@
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
+        "section_background_color": "#fff6ee",
         "full_width": true,
         "max_width": 126,
         "padding_top": 8,

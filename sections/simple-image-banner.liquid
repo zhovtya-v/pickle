@@ -7,6 +7,10 @@
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
+    .simple-image-banner-{{ section.id }} {
+        background: {{ section.settings.section_background_color }};
+    }
+
     .simple-image-banner-{{ section.id }} .image-banner-wrap {
         border-radius: {{ section.settings.block_border_radius }}px;
         box-shadow: 10px 10px {{ section.settings.block_border_color }};
@@ -74,9 +78,9 @@
         },
         {
             "type": "color",
-            "id": "block_background_color",
+            "id": "section_background_color",
             "label": "Background color",
-            "default": "#ffffff"
+            "default": "#FFFCFA"
         },
         {
             "type": "checkbox",

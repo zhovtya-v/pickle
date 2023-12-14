@@ -1295,14 +1295,18 @@ window.addEventListener('load', () => {
 });
 
 const subscribeSection = new Swiper( '.subscribe-wrap.swiper', {
-  grabCursor: true,
   loop: true,
+  speed: 2000,
   slidesPerView: 1.6,
   spaceBetween: 0,
   breakpoints: {
     768: {
       slidesPerView: 5,
     }
+  },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false
   }
 });
 

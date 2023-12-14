@@ -5,6 +5,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.60 | round: 0 }}px;
+    background-color: {{ section.settings.section_background_color }};
   }
 
   .section-{{ section.id }}-padding .image-with-text__content .button {
@@ -23,6 +24,8 @@
 
   .section-{{ section.id }}-padding .image-with-text__content .image-with-text__heading {
     letter-spacing: -0.4px;
+    margin-top: {{ section.settings.mob_indent_top_title }}px;
+    margin-bottom: {{ section.settings.mob_indent_bottom_title }}px;
     font-size: calc({{ section.settings.mob_size_title }}px + ({{ section.settings.desk_size_title }} - {{ section.settings.mob_size_title }}) * ((100vw - 375px) / (1440 - 375)));
   }
 
@@ -36,8 +39,9 @@
 
   .custom-image-with-text-{{ section.id }} .image-with-text {
     background: {{ section.settings.block_background_color }};
-    border-radius: {{ section.settings.block_border_radius }}px;
+
     border: 0.3rem solid {{ section.settings.block_border_color }};
+    border-radius: {{ section.settings.block_border_radius | times: 0.66 | round: 0 }}px;
 
     box-shadow: 1rem 1rem 0 0 {{ section.settings.block_border_color }};
   }
@@ -59,11 +63,18 @@
     border-radius: {{ section.settings.image_border_radius }}px;
   }
 
+  .custom-image-with-text-{{ section.id }} .image-with-text .image-with-text__media-item>* {
+    background-color: #FFF6EE;
+    display: block;
+    border: none;
+  }
+
   .custom-image-with-text-{{ section.id }}.custom-image-with-image-border .image-with-text .image-with-text__media-item>* {
-    border-radius: {{ section.settings.image_border_radius }}px;
+    border-radius: {{ section.settings.image_border_radius | times: 0.66 | round: 0 }}px;
     box-shadow: 12px 12px {{ section.settings.image_border_color }} !important;
     border: 3px solid {{ section.settings.image_border_color }};
     margin-right: 12px;
+    background-color: #FFF6EE;
   }
 
   @media screen and (min-width: 750px) {
@@ -91,9 +102,15 @@
     .custom-image-with-text-{{ section.id }}.custom-image-with-image-border .image-with-text .image-with-text__media-item>* {
       box-shadow: 14px 14px {{ section.settings.image_border_color }} !important;
       margin-right: 14px;
+      border-radius: {{ section.settings.image_border_radius }}px;
     }
     .section-{{ section.id }}-padding .image-with-text__content .image-with-text__heading br {
       display: block;
+    }
+
+    .section-{{ section.id }}-padding .image-with-text__content .image-with-text__heading {
+      margin-top: {{ section.settings.desk_indent_top_title }}px;
+      margin-bottom: {{ section.settings.desk_indent_bottom_title }}px;
     }
   }
 
@@ -135,7 +152,7 @@
       <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
           <div
-            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %} "
+            class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %} "
             {% if section.settings.height == 'adapt' and section.settings.image != blank %}
               style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
             {% endif %}
@@ -159,8 +176,8 @@
                 | image_url: width: 1500
                 | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
               }}
-            {%- else -%}
-              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% comment %}{%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}{% endcomment %}
             {%- endif -%}
           </div>
         </div>
@@ -221,6 +238,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section background color",
+      "default": "#FFFCFA"
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -398,6 +421,46 @@
     },
     {
       "type": "range",
+      "id": "mob_indent_top_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mob title top indent ",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "mob_indent_bottom_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mob title bottom indent",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desk_indent_top_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop title top indent ",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "desk_indent_bottom_title",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop title bottom indent",
+      "default": 60
+    },
+    {
+      "type": "range",
       "id": "mob_size_text",
       "min": 0,
       "max": 60,
@@ -415,6 +478,26 @@
       "unit": "px",
       "label": "Desktop size text",
       "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mob_indent_top_text",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mob text top indent",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "desk_indent_bottom_text",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop text bottom indent",
+      "default": 60
     },
     {
       "type": "color_scheme",

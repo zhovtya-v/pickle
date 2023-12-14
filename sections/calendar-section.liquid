@@ -22,6 +22,7 @@
     <div class="page-width section-{{ section.id }}-padding">
         <h2 class="title">{{ section.settings.title }}</h2>
         <div class="calendar-wrap swiper">
+            <div class="custom-box-shadow"></div>
             <div class="swiper-wrapper">
                 {%- for block in section.blocks -%}
                     <div class="calendar-column swiper-slide {% if block.settings.has_label %} sale-label{% endif %}">

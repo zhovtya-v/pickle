@@ -201,6 +201,11 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
         padding: 0 0;
     }
 }
+@media screen and (min-width: 1400px) {
+    .page-width {
+        /*padding: 0 2.4rem;*/
+    }
+}
 
 .isolate {
     position: relative;
@@ -1345,7 +1350,7 @@ button.shopify-payment-button__button--unbranded {
     justify-content: center;
     align-items: center;
     border: 0;
-    padding: 0 3rem;
+    padding: 1.9rem 3rem;
     cursor: pointer;
     font: inherit;
     font-size: 1.5rem;
@@ -2475,7 +2480,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
     position: fixed;
     left: 1.6rem;
     right: 1.6rem;
-    top: 40px;
+    top: 4.4rem;
 }
 
 .header-wrapper.gradient {
