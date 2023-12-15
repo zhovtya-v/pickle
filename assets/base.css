@@ -550,8 +550,8 @@ h6:empty {
     display: inline-block;
     border: none;
     box-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
+    /*text-decoration: underline;
+    text-underline-offset: 0.3rem;*/
     color: rgb(var(--color-link));
     background-color: transparent;
     font-size: 1.4rem;
@@ -653,7 +653,6 @@ details > * {
 }
 
 .underlined-link,
-.customer a,
 .inline-richtext a {
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
@@ -671,7 +670,6 @@ details > * {
 }
 
 .underlined-link:hover,
-.customer a:hover,
 .inline-richtext a:hover {
     color: rgb(var(--color-link));
     text-decoration-thickness: 0.2rem;
@@ -1294,6 +1292,7 @@ button.shopify-payment-button__button--unbranded {
     border: 1px solid #1F4692;
     color: var(--color-button);
     transition: all 0.15s;
+    text-align: center;
 }
 
 .button.button--primary:before, .button.button--secondary:before {

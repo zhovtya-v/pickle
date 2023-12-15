@@ -448,7 +448,7 @@
       "total_duties": "Duties"
     },
     "orders": {
-      "title": "Order history",
+      "title": "My Bookings",
       "order_number": "Order",
       "order_number_link": "Order number {{ number }}",
       "date": "Date",

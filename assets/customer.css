@@ -400,19 +400,22 @@
 }
 
 /* Account/Order */
-:is(.account, .order) {
-  margin: 0 auto;
-  max-width: var(--page-width);
-  padding-left: 2rem;
-  padding-right: 2rem;
+/*:is(.account, .order) {
+rgin: 0 auto;
+max-width: var(--page-width);
+padding-left: 1.7rem;
+padding-right: 1.7rem;
+
 }
 
 @media screen and (min-width: 750px) {
   :is(.account, .order) {
     padding-left: 5rem;
     padding-right: 5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
-}
+}*/
 
 @media screen and (min-width: 990px) {
   :is(.account, .order) > div:nth-of-type(2) {
@@ -752,4 +755,430 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7),
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
+}
+
+
+
+.customer {
+  background-color: #FFFCFA;
+  background-image: url("./customer-bg-mob.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+
+.account-sidebar {
+  /*max-width: 30.5rem;*/
+  border: 2px solid #D55F4A;
+  width: 100%;
+  padding: 1.4rem;
+  border-radius: 14px;
+  flex-direction: column;
+}
+
+.account-sidebar h2 {
+  font-size: 14px;
+  margin-top: 2.4rem;
+}
+
+.customer.account .account-sidebar .customer-details-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+  margin-bottom: 14px;
+}
+
+.account-sidebar .edit-account-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 6px;
+  border: 1px solid #1F4692;
+  box-shadow: 2px 2px 0 0 #1F4692;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF6EE;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.account-sidebar .edit-account-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: auto;
+}
+
+.account-sidebar .edit-account-icon svg path {
+  fill: #1F4692;
+  transition: fill 0.15s;
+}
+
+.account-sidebar .edit-account-icon:hover {
+  border-color: #D55F4A;
+  box-shadow: 2px 2px 0 0 #D55F4A;
+}
+
+.account-sidebar .edit-account-icon:hover svg path {
+  fill: #D55F4A;
+}
+
+.account-sidebar .customer-details-wrap .customer-icon-wrap {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D55F4A;
+  flex-shrink: 0;
+}
+
+.account-sidebar .customer-details-wrap .customer-icon-wrap svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.account-sidebar .customer-details-wrap .customer-icon-wrap svg path {
+  fill: #FFF6EE;
+}
+
+.account-sidebar .customer-details-wrap p {
+  flex-grow: 1;
+  margin: 0 13px;
+  line-height: 1;
+}
+
+.account-sidebar .customer-details-wrap p br {
+  display: none;
+}
+
+.customer-following-info {
+  display: flex;
+  font-size: 12px;
+  color: #000000;
+}
+
+.customer-following-info div {
+  position: relative;
+}
+
+
+.customer-following-info div:not(:last-child) {
+  padding-right: 24px;
+  margin-right: 20px;
+}
+
+.customer-following-info span {
+  margin-right: 5px;
+}
+
+.customer-following-info div:not(:last-child):after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background: #DDDFE6;
+}
+
+
+@media only screen and (max-width: 749px) {
+  .account-sidebar {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .customer-following-info div:not(:last-child) {
+    padding-right: 16px;
+    margin-right: 14px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .customer {
+    background-image: url("./customer-bg.jpg");
+  }
+
+  .account-sidebar {
+    border-width: 3px;
+    padding: 1.7rem;
+    border-radius: 16px;
+    max-width: 30.5rem;
+  }
+
+  .account-sidebar h2 {
+    font-size: 16px;
+    margin-top: 1.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .account-sidebar .edit-account-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+    border-width: 2px;
+    box-shadow: 3px 3px 0 0 #1F4692;
+  }
+
+  .account-sidebar .edit-account-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .account-sidebar .edit-account-icon:hover {
+    box-shadow: 3px 3px 0 0 #D55F4A;
+  }
+
+  .account-sidebar .customer-details-wrap .customer-icon-wrap {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+
+  .account-sidebar .customer-details-wrap .customer-icon-wrap svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .customer-following-info div:not(:last-child) {
+    padding-right: 13px;
+    margin-right: 11px;
+  }
+}
+
+.orders-wrap .order-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 314/163;
+}
+
+.orders-wrap .order-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.orders-wrap .order-item:last-child {
+  margin-bottom: 24px;
+}
+
+.orders-wrap .order-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+}
+
+.orders-wrap .order-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background: #D55F4A;
+  padding: 6px 7px 7px 7px;
+}
+
+.orders-wrap .order-info .date {
+  margin: 0;
+  color: #FFFCFA;
+  font-size: 12px;
+}
+
+.orders-wrap .order-info .title {
+  margin: 0;
+  color: #FFFCFA;
+  font-size: 16px;
+}
+
+.league-available-wrap .orders-wrap .order-item:last-child {
+  margin-bottom: 0;
+}
+
+.league-available-wrap .order-item .button--primary {
+  background: #FFFCFA;
+  box-shadow: none;
+  border-color: #D55F4A;
+  color: #D55F4A;
+  padding: 0;
+  text-underline-offset: 0;
+  text-decoration-thickness:0;
+  text-decoration: none;
+  text-align: center;
+  min-height: 34px;
+  max-width: 88px;
+  min-width: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.league-available-wrap .order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 36px 8px 7px;
+}
+
+.league-available-wrap .order-item .button--primary:hover {
+  background: #F4D5CD;
+}
+
+@media only screen and (min-width: 750px) {
+  .orders-wrap .order-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .orders-wrap .order-item:last-child {
+    margin-bottom: 33px;
+  }
+
+  .orders-wrap .order-item {
+    aspect-ratio: 265/141;
+  }
+
+  .league-available-wrap .order-info {
+    padding: 9px 7px 7px 7px;
+  }
+}
+
+
+.customer-leagues-wrap .customer-leagues {
+  border: 3px solid;
+  margin-right: 12px;
+  border-radius: 24px;
+  position: relative;
+  padding: 12px 10px 12px 12px;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues {
+  box-shadow: 10px 6px 0 0 #D55F4A;
+  border-color: #D55F4A;
+  margin-bottom: 25px;
+}
+
+.customer-leagues-wrap .customer-golf-leagues {
+  box-shadow: 10px 6px 0 0 #1F4692;
+  border-color: #1F4692;
+}
+
+.customer-leagues-wrap .customer-leagues .button {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  min-height: 34px;
+  max-width: 275px;
+  min-width: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 10px;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues .button {
+  background: #D55F4A;
+  color: #FFFCFA;
+  box-shadow: 3px 3px #FFFCFA;
+  border-color: #FFFCFA;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues .button:hover {
+  background: #FFFCFA;
+  color: #D55F4A;
+  box-shadow: 3px 3px #D55F4A;
+  border-color: #D55F4A;
+}
+
+.customer-leagues-wrap .leagues-title {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues .leagues-title {
+  color: #D55F4A;
+}
+
+.customer-leagues-wrap .customer-golf-leagues .leagues-title {
+  color: #1F4692;
+}
+
+
+.customer-leagues-wrap .leagues-image {
+  aspect-ratio: 303/186;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.customer-leagues-wrap .leagues-image img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  vertical-align: top;
+}
+
+.customer-leagues-wrap .leagues-image .desk {
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .customer-leagues-wrap .leagues-image .desk {
+    display: block;
+  }
+
+  .customer-leagues-wrap .leagues-image .mob {
+    display: none;
+  }
+
+  .customer-leagues-wrap {
+    flex-grow: 1;
+    width: calc(100% - 325px);
+  }
+
+  .customer-leagues-wrap .leagues-title {
+    margin: 0 0 13px;
+    font-size: 2.4rem;
+
+  }
+
+  .customer .account-wrap {
+    display: flex;
+    gap: 20px;
+  }
+
+
+  .customer-leagues-wrap .customer-leagues {
+    margin-right: 12px;
+    padding: 18px 17px 17px 17px;
+    margin-bottom: 32px;
+    box-shadow: 12px 12px 0 0;
+  }
+
+  .customer-leagues-wrap .customer-pickleball-leagues {
+    box-shadow: 12px 12px 0 0 #D55F4A;
+  }
+
+  .customer-leagues-wrap .customer-golf-leagues {
+    box-shadow: 12px 12px 0 0 #1F4692;
+  }
+
+  .customer-leagues-wrap .leagues-image {
+    aspect-ratio: 903/295;
+    border-radius: 16px;
+  }
+
+  .customer-leagues-wrap .customer-leagues .button {
+    position: absolute;
+    bottom: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
 }
