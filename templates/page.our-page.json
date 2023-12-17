@@ -87,7 +87,7 @@
         "content_layout": "no-overlap",
         "mob_size_title": 32,
         "desk_size_title": 60,
-        "mob_indent_top_title": 32,
+        "mob_indent_top_title": 40,
         "mob_indent_bottom_title": 0,
         "desk_indent_top_title": 32,
         "desk_indent_bottom_title": 2,
