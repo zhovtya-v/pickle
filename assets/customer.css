@@ -953,7 +953,7 @@ li[data-address] > h2 {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 314/163;
+  aspect-ratio: 314/161;
 }
 
 .orders-wrap .order-item:not(:last-child) {
@@ -1048,33 +1048,75 @@ li[data-address] > h2 {
 
 
 .customer-leagues-wrap .customer-leagues {
-  border: 3px solid;
   margin-right: 12px;
   border-radius: 24px;
   position: relative;
-  padding: 12px 10px 12px 12px;
+  padding: 1.5rem;
+}
+
+.customer-leagues-wrap .customer-leagues:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 24px;
+  border: 3px solid;
+  z-index: 2;
+  background: #FFFCFA;
+}
+
+.customer-leagues-wrap .customer-leagues:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  left: 10px;
+  bottom: -6px;
+  border-radius: 24px;
+  z-index: 1;
 }
 
 .customer-leagues-wrap .customer-pickleball-leagues {
-  box-shadow: 10px 6px 0 0 #D55F4A;
-  border-color: #D55F4A;
   margin-bottom: 25px;
 }
 
+.customer-leagues-wrap .customer-leagues-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues:before {
+  border-color: #D55F4A;
+}
+
+.customer-leagues-wrap .customer-pickleball-leagues:after {
+  background: #D55F4A;
+}
+/*
 .customer-leagues-wrap .customer-golf-leagues {
   box-shadow: 10px 6px 0 0 #1F4692;
   border-color: #1F4692;
+}*/
+
+.customer-leagues-wrap .customer-golf-leagues:before {
+  border-color: #1F4692;
+}
+
+.customer-leagues-wrap .customer-golf-leagues:after {
+  background: #1F4692;
 }
 
 .customer-leagues-wrap .customer-leagues .button {
   position: absolute;
-  bottom: 12%;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
-  min-height: 34px;
-  max-width: 275px;
-  min-width: 275px;
+  min-height: 4.2rem;
+  max-width: 27.5rem;
+  min-width: 27.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1153,20 +1195,18 @@ li[data-address] > h2 {
     gap: 20px;
   }
 
-
   .customer-leagues-wrap .customer-leagues {
     margin-right: 12px;
-    padding: 18px 17px 17px 17px;
+    padding: 2rem;
     margin-bottom: 32px;
-    box-shadow: 12px 12px 0 0;
   }
 
-  .customer-leagues-wrap .customer-pickleball-leagues {
-    box-shadow: 12px 12px 0 0 #D55F4A;
-  }
-
-  .customer-leagues-wrap .customer-golf-leagues {
-    box-shadow: 12px 12px 0 0 #1F4692;
+  .customer-leagues-wrap .customer-leagues:after {
+    top: 12px;
+    right: -12px;
+    left: 12px;
+    bottom: -12px;
+    border-radius: 34px;
   }
 
   .customer-leagues-wrap .leagues-image {
@@ -1176,9 +1216,11 @@ li[data-address] > h2 {
 
   .customer-leagues-wrap .customer-leagues .button {
     position: absolute;
-    bottom: 16%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 4.2rem;
     font-size: 18px;
+
+    min-height: 5.7rem;
+    max-width: 18.6rem;
+    min-width: 18.6rem;
   }
 }
