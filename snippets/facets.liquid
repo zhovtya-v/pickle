@@ -56,13 +56,13 @@
               <div class="active-facets active-facets-desktop">
                 <div class="active-facets-vertical-filter">
                   {%- unless results.filters == empty -%}
-                    <h2
+                    {% comment %}<h2
                       class="facets__heading facets__heading--vertical caption-large text-body"
                       id="verticalTitle"
                       tabindex="-1"
                     >
                       {{ 'products.facets.filter_by_label' | t }}
-                    </h2>
+                    </h2>{% endcomment %}
                   {%- endunless -%}
                   <facet-remove class="active-facets__button-wrapper">
                     <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
@@ -154,7 +154,7 @@
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
                           </span>
                         {%- endif -%}
-                        {% render 'icon-caret' %}
+                        {% comment %}{% render 'icon-caret' %}{% endcomment %}
                       </div>
                     </summary>
                     <div
@@ -230,30 +230,45 @@
                                     %}
                                   </div>
                                 {% else %}
-                                  <svg
-                                    width="1.6rem"
-                                    height="1.6rem"
-                                    viewBox="0 0 16 16"
-                                    aria-hidden="true"
-                                    focusable="false"
+                                  <svg class="dwdwdwdwd"
+                                       width="2rem"
+                                       height="2rem"
+                                       viewBox="0 0 20 20"
+                                       aria-hidden="true"
+                                       focusable="false"
+                                       fill="none"
                                   >
-                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                    <g clip-path="url(#clip0_458_376600-{{ forloop.index }})">
+                                      <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                      <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#FFFCFA"/>
+                                      <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_458_376600-{{ forloop.index }}">
+                                        <rect width="20" height="20" fill="white"/>
+                                      </clipPath>
+                                    </defs>
                                   </svg>
 
                                   <svg
-                                    aria-hidden="true"
-                                    class="icon icon-checkmark"
-                                    width="1.1rem"
-                                    height="0.7rem"
-                                    viewBox="0 0 11 7"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                          aria-hidden="true"
+                                          class="icon icon-checkmark frfrgrg"
+                                          width="2rem"
+                                          height="2rem"
+                                          viewBox="0 0 20 20"
+                                          fill="none"
                                   >
-                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-                                      stroke="currentColor"
-                                      stroke-width="1.75"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round" />
+                                    <g clip-path="url(#clip0_458_3766377-{{ forloop.index }})">
+                                      <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                      <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#F4BE18"/>
+                                      <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                      <path d="M13.1663 6.97919L8.12467 12.0209L5.83301 9.72919" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_458_3766377-{{ forloop.index }}">
+                                        <rect width="20" height="20" fill="white"/>
+                                      </clipPath>
+                                    </defs>
                                   </svg>
                                 {% endif %}
 
@@ -297,30 +312,44 @@
                                   {% endif %}
                                 >
 
-                                <svg
-                                  width="1.6rem"
-                                  height="1.6rem"
-                                  viewBox="0 0 16 16"
-                                  aria-hidden="true"
-                                  focusable="false"
+                                <svg class="dwdwdwdwd"
+                                     width="2rem"
+                                     height="2rem"
+                                     viewBox="0 0 20 20"
+                                     aria-hidden="true"
+                                     focusable="false"
                                 >
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  <g clip-path="url(#clip0_458_376601-{{ forloop.index }})">
+                                    <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                    <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#FFFCFA"/>
+                                    <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_458_376601-{{ forloop.index }}">
+                                      <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                  </defs>
                                 </svg>
 
                                 <svg
-                                  aria-hidden="true"
-                                  class="icon icon-checkmark"
-                                  width="1.1rem"
-                                  height="0.7rem"
-                                  viewBox="0 0 11 7"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true"
+                                        class="icon icon-checkmark"
+                                        width="2rem"
+                                        height="2rem"
+                                        viewBox="0 0 20 20"
+                                        fill="none"
                                 >
-                                  <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-                                    stroke="currentColor"
-                                    stroke-width="1.75"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                  <g clip-path="url(#clip0_458_3766301)">
+                                    <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                    <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#F4BE18"/>
+                                    <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                    <path d="M13.1663 6.97919L8.12467 12.0209L5.83301 9.72919" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_458_3766301">
+                                      <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                  </defs>
                                 </svg>
 
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
@@ -775,26 +804,44 @@
                                   {% else %}
                                     <span class="mobile-facets__highlight"></span>
 
-                                    <svg
-                                      width="1.6rem"
-                                      height="1.6rem"
-                                      viewBox="0 0 16 16"
+                                    <svg class="dwdwdwdwd"
+                                      width="2rem"
+                                      height="2rem"
+                                      viewBox="0 0 20 20"
                                       aria-hidden="true"
                                       focusable="false"
                                     >
-                                      <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                      <g clip-path="url(#clip0_458_376602-{{ forloop.index }})">
+                                        <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                        <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#FFFCFA"/>
+                                        <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_458_376602-{{ forloop.index }}">
+                                          <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                      </defs>
                                     </svg>
 
                                     <svg
                                       aria-hidden="true"
                                       class="icon icon-checkmark"
-                                      width="1.1rem"
-                                      height="0.7rem"
-                                      viewBox="0 0 11 7"
+                                      width="2rem"
+                                      height="2rem"
+                                      viewBox="0 0 20 20"
                                       fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
                                     >
-                                      <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                      <g clip-path="url(#clip0_458_3766313)">
+                                        <rect x="1" y="1" width="19" height="19" rx="6" fill="#1C1C1C"/>
+                                        <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" fill="#F4BE18"/>
+                                        <rect x="0.5" y="0.5" width="18" height="18" rx="5.5" stroke="#1C1C1C"/>
+                                        <path d="M13.1663 6.97919L8.12467 12.0209L5.83301 9.72919" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_458_3766313">
+                                          <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                      </defs>
                                     </svg>
                                   {% endif %}
 

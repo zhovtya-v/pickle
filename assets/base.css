@@ -610,8 +610,12 @@ hr {
 
 .full-unstyled-link {
     text-decoration: none;
-    color: currentColor;
+    color: #1C1C1C;
     display: block;
+
+    font-family: 'Birdie', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
 .placeholder {
@@ -1321,6 +1325,7 @@ button.shopify-payment-button__button--unbranded {
     background: #FFF6EE;
     box-shadow: 3px 3px 0 0 #D55F4A;
     border-color: #D55F4A;
+    color: #D55F4A;
 }
 
 
@@ -1760,7 +1765,7 @@ details[open] > .share-button__fallback {
 }
 
 .field__input:focus-visible,
-.select__select:focus-visible,
+/*.select__select:focus-visible,*/
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
@@ -1770,7 +1775,7 @@ details[open] > .share-button__fallback {
 }
 
 .field__input:focus,
-.select__select:focus,
+/*.select__select:focus,*/
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
@@ -3728,3 +3733,5 @@ details-disclosure > details {
         --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
     }
 }
+
+
